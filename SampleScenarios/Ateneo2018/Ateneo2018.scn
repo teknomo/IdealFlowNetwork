@@ -1,9 +1,0 @@
-ScenarioName=Ateneo2018
-Node=Nodes_withCloud.nod
-Link=Links_withCloud.lin
-maxAllowableCongestion=0.99
-totalFlow=500000
-travelTimeModel=BPR
-calibrationBasis=congestion
-capacityBasis=width
-cloudNode=78
