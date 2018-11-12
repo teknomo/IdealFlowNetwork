@@ -1,0 +1,3 @@
+ScenarioName=MyScenario2
+Node=node.txt
+Link=link2.txt
