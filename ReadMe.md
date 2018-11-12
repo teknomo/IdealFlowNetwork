@@ -1,7 +1,7 @@
 
 # Ideal Flow Network
 
-Ideal Flow Network (IFN) is a Python module and library to compute network efficiency based on the theory of Ideal Flow proposed by [Kardi Teknomo](http://people.revoledu.com/kardi/) and his team. Ideal Flow is a new concept to analyze transportation networks. 
+Ideal Flow Network (IFN) is a Python module and library to compute network efficiency based on the theory of Ideal Flow proposed by [Kardi Teknomo](http://people.revoledu.com/kardi/) and his team. Ideal Flow is a new concept to analyze transportation networks. For traffic assignment using IFN, check the user guide for more details.
 
 
 
@@ -41,5 +41,6 @@ h = networkEntropy(S) | return the value of network entropy
 e = entropyRatio(S) | return network entropy ratio
 
 Tutorial on Ideal Flow Network is available in [Revoledu.com](http://people.revoledu.com/kardi/tutorial/Python/Ideal+Flow.html)
+Check also: https://people.revoledu.com/kardi/research/trajectory/ifn/index.html
 
-(c) 2017 Kardi Teknomo
+(c) 2018 Kardi Teknomo
