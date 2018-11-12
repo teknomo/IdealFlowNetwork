@@ -300,6 +300,6 @@ if __name__ == '__main__':
         if scenario=="":
             print("to use: input the scenario file (including the folder name)")
     else:
-        scenario='C:\Data\simplestScenario\scenario2.txt'
+        scenario='scenario.txt'
     IFN(scenario)
     
