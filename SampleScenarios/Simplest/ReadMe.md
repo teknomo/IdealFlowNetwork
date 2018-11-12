@@ -1,5 +1,5 @@
 
-# Sample Scenarios
+# Simplest Scenario
 
-+ Simplest: simplest scenario with only three nodes and three links
-+ Ateneo2018: road network of ateneo de manila campus 2018
+Simplest scenario with only three nodes and three links
+
