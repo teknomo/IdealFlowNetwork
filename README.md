@@ -41,6 +41,7 @@ h = networkEntropy(S) | return the value of network entropy
 e = entropyRatio(S) | return network entropy ratio
 
 Tutorial on Ideal Flow Network is available in [Revoledu.com](http://people.revoledu.com/kardi/tutorial/Python/Ideal+Flow.html)
+
 Check also: https://people.revoledu.com/kardi/research/trajectory/ifn/index.html
 
 (c) 2018 Kardi Teknomo
