@@ -1,0 +1,4 @@
+ScenarioName=myScenario
+Node=Node.txt
+Link=Link.txt
+maxAllowableCongestion=0.99
