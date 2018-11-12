@@ -36,7 +36,7 @@ class IFN():
 
         if self.calibrationBasis=="flow":
             # calibrate with new kappa to reach totalFlow
-            kappa=totalFlow
+            kappa=self.totalFlow
         else: # calibrationBasis=="congestion"
             # calibrate with new kappa to reach max congestion level
             kappa=100*float(self.maxAllowableCongestion)/maxCongestion # total flow
@@ -106,7 +106,7 @@ class IFN():
         # initialize the default values
         self.travelTimeModel=None
         self.maxAllowableCongestion=1
-        self.totalFlow=None
+        self.totalFlow=1000
         self.calibrationBasis=None
         self.cloudNode=None
         self.capacityBasis=None
@@ -300,6 +300,7 @@ if __name__ == '__main__':
         if scenario=="":
             print("to use: input the scenario file (including the folder name)")
     else:
+##        scenario=r'C:\Users\Teknomo\Research\IFN\SampleScenarios\Ateneo2018\Ateneo2018.scn'
         scenario='scenario.txt'
     IFN(scenario)
     
