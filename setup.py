@@ -15,7 +15,7 @@ setup(
   author = 'Kardi Teknomo',                  
   author_email = 'teknomo@gmail.com',     
   url = 'http://people.revoledu.com/kardi/',   
-  download_url = 'https://github.com/teknomo/IdealFlowNetwork',    
+  download_url = 'https://github.com/teknomo/IdealFlowNetwork/blob/Development/dist/IdealFlowNetwork-1.0.1.tar.gz',
   keywords = ['IFN', 'Markov', 'irreducible', 'premagic'],
   install_requires=[           
           'numpy',
