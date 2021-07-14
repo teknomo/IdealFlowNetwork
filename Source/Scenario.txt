@@ -1,3 +1,0 @@
-ScenarioName=MyScenario
-Node=node.txt
-Link=link.txt
