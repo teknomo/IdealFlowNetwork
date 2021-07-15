@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+src/IdealFlowNetwork/network.py
+src/IdealFlowNetwork.egg-info/PKG-INFO
+src/IdealFlowNetwork.egg-info/SOURCES.txt
+src/IdealFlowNetwork.egg-info/dependency_links.txt
+src/IdealFlowNetwork.egg-info/requires.txt
+src/IdealFlowNetwork.egg-info/top_level.txt
