@@ -8,7 +8,8 @@ http://people.revoledu.com/kardi/
 
 import unittest
 import numpy as np
-from idealflow import network as net
+from IdealFlowNetwork import network as net
+
 
 class IFNCoreTestCase(unittest.TestCase):
     def setUp(self):

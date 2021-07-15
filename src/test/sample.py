@@ -4,10 +4,8 @@ sample.py
 @Author: Kardi Teknomo
 http://people.revoledu.com/kardi/
 """
-# from idealflow import network as ifn
-import idealflow.network as ifn
+from IdealFlowNetwork import network as ifn
 net=ifn.IFN()
-
 net.name="random example network"        
 k=4
 m=k+int(3*k/4)        
