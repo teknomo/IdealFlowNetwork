@@ -1,7 +1,7 @@
 # Ideal Flow Network Python Library
 
 
-This Python module is the core library for the computation of Ideal Flow Network (IFN). The IFN theory was proposed by [Kardi Teknomo](http://people.revoledu.com/kardi/) in 2015 and subsequently developed by his team. Check also: https://people.revoledu.com/kardi/research/trajectory/ifn/index.html
+This Python module is the core library for the computation of Ideal Flow Network (IFN). Ideal Flow is a steady state relative flow distribution in a strongly connected network where the flows are conserved. The IFN theory was proposed by [Kardi Teknomo](http://people.revoledu.com/kardi/) in 2015 and subsequently developed by his team. Check also: https://people.revoledu.com/kardi/research/trajectory/ifn/index.html
 
 Ideal Flow is a new concept to analyze transportation networks or communication network. For IFN application to traffic assignment check [IFN-Transport](https://github.com/teknomo/ifn-transport) for more details. 
 
@@ -11,6 +11,80 @@ Ideal Flow is a new concept to analyze transportation networks or communication 
  > **pip install IdealFlowNetwork**
 
 Check Also in [Pypi](https://pypi.org/project/IdealFlowNetwork/)
+
+Latest Stable Version: [1.0.3](https://pypi.org/project/IdealFlowNetwork/1.0.3/)
+
+### Example
+
+
+```python
+from IdealFlowNetwork import network as ifn
+
+net=ifn.IFN()
+net.name="random example network"
+        
+k=7
+m=k+int(3*k/4)        
+C=net.randIrreducible(k,m) # k nodes, m links
+A=net.capacity2adj(C)
+print("A=",A,'\n')
+S=net.capacity2stochastic(C)
+print("S=",S,'\n')
+F=net.capacity2idealFlow(C)
+print("F=",F,'\n')
+scaling=net.globalScaling(F,'int')
+print('scaling:',scaling,'\n')
+F1=net.equivalentIFN(F, scaling)
+        
+import pandas as pd
+pd.options.display.float_format = '{:,.0f}'.format
+print(pd.DataFrame(F1))
+```
+
+    A= [[0 1 0 0 0 1 0]
+     [0 0 0 1 0 0 1]
+     [0 0 0 1 0 1 0]
+     [0 0 0 0 1 0 0]
+     [0 0 1 0 1 0 0]
+     [0 0 0 0 0 0 1]
+     [1 0 0 0 1 0 0]] 
+    
+    S= [[0.  0.5 0.  0.  0.  0.5 0. ]
+     [0.  0.  0.  0.5 0.  0.  0.5]
+     [0.  0.  0.  0.5 0.  0.5 0. ]
+     [0.  0.  0.  0.  1.  0.  0. ]
+     [0.  0.  0.5 0.  0.5 0.  0. ]
+     [0.  0.  0.  0.  0.  0.  1. ]
+     [0.5 0.  0.  0.  0.5 0.  0. ]] 
+    
+    F= [[0.         0.03508772 0.         0.         0.         0.03508772
+      0.        ]
+     [0.         0.         0.         0.01754386 0.         0.
+      0.01754386]
+     [0.         0.         0.         0.0877193  0.         0.0877193
+      0.        ]
+     [0.         0.         0.         0.         0.10526316 0.
+      0.        ]
+     [0.         0.         0.1754386  0.         0.1754386  0.
+      0.        ]
+     [0.         0.         0.         0.         0.         0.
+      0.12280702]
+     [0.07017544 0.         0.         0.         0.07017544 0.
+      0.        ]] 
+    
+    scaling: 57 
+    
+       0  1  2  3  4  5  6
+    0  0  2  0  0  0  2  0
+    1  0  0  0  1  0  0  1
+    2  0  0  0  5  0  5  0
+    3  0  0  0  0  6  0  0
+    4  0  0 10  0 10  0  0
+    5  0  0  0  0  0  0  7
+    6  4  0  0  0  4  0  0
+    
+
+
 
 
 # Scientific Basis
@@ -51,3 +125,4 @@ e = entropyRatio(S) | return network entropy ratio
 Tutorial on Ideal Flow Network is available in [Revoledu.com](http://people.revoledu.com/kardi/tutorial/Python/Ideal+Flow.html)
 
 (c) 2021 Kardi Teknomo
+
