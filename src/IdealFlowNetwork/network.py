@@ -213,7 +213,7 @@ class IFN():
         '''
         return True of M is a positive matrix
         '''
-        if np.any(np.array(M)<=0):
+        if np.any(np.array(M)<=0) or np.any(np.isnan(M)):
             return False
         else:
             return True
