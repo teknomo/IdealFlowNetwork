@@ -57,8 +57,8 @@ eprint = {
 # Scientific Basis
 The following publications are the foundations of Ideal Flow analysis:
 
-+ Teknomo, K., Gardon, R. and Saloma, C. (2019), Ideal Flow Traffic Analysis: A Case Study on a Campus Road Network, Philippine Journal of Science 148 (1): 5162.
-+ Teknomo, K. (2018) Ideal Flow of Markov Chain, Discrete Mathematics, Algorithms and Applications, doi: 10.1142/S1793830918500738 
++ Teknomo, K., Gardon, R. and Saloma, C. (2019), [Ideal Flow Traffic Analysis: A Case Study on a Campus Road Network](https://philjournalsci.dost.gov.ph/images/pdf/pjs_pdf/vol148no1/ideal-flow-trappic-analysis_.pdf), Philippine Journal of Science 148 (1): 5162.
++ Teknomo, K. (2018) [Ideal Flow of Markov Chain](https://www.worldscientific.com/doi/pdf/10.1142/S1793830918500738), Discrete Mathematics, Algorithms and Applications, doi: 10.1142/S1793830918500738 
 + [Teknomo, K.](http://people.revoledu.com/kardi/publication/index.html) and Gardon, R.W. (2017) Intersection Analysis Using the Ideal Flow Model, Proceeding of the IEEE 20th International Conference on Intelligent Transportation Systems, Oct 16-19, 2017, Yokohama, Japan
 + [Teknomo, K.](http://people.revoledu.com/kardi/publication/index.html) (2017) Ideal Relative Flow Distribution on Directed Network, Proceeding of the 12th Eastern Asia Society for Transportation Studies (EASTS), Ho Chi Minh, Vietnam Sept 18-21, 2017.
 + [Teknomo, K.](https://arxiv.org/abs/1706.08856) (2017) Premagic and Ideal Flow Matrices. https://arxiv.org/abs/1706.08856
