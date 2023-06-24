@@ -165,7 +165,7 @@ print(pd.DataFrame(F1))
     
 
 
-More tutorial on Ideal Flow Network is available in [Revoledu.com](http://people.revoledu.com/kardi/tutorial/IFN/). Feel free to join [telegram channel][![@IdealFlowNetwork](https://img.shields.io/badge/telegram-IdealFlowNetwork-blue.svg)](https://t.me/IdealFlowNetwork/).
+More tutorial on Ideal Flow Network is available in [Revoledu.com](http://people.revoledu.com/kardi/tutorial/IFN/) [![@Revoledu](https://img.shields.io/badge/Revol-edu-orange.svg)](http://people.revoledu.com/kardi/tutorial/IFN/). Feel free to join [telegram channel](https://t.me/IdealFlowNetwork/) [![@IdealFlowNetwork](https://img.shields.io/badge/telegram-IdealFlowNetwork-blue.svg)](https://t.me/IdealFlowNetwork/).
 
 ## Development
 
