@@ -56,7 +56,8 @@ eprint = {
 
 # Scientific Basis
 The following publications are the foundations of Ideal Flow analysis:
-
++ Teknomo, K.(2019), [Ideal Flow Network in Society 5.0](https://link.springer.com/chapter/10.1007/978-3-030-28565-4_11) in Mahdi et al, Optimization in Large Scale Problems - Industry 4.0 and Society 5.0 Applications, Springer, p. 67-69
++ Teknomo, K. and Gardon, R.W. (2019) [Traffic Assignment Based on Parsimonious Data: The Ideal Flow Network](https://ieeexplore.ieee.org/document/8917426), 2019 IEEE Intelligent Transportation Systems Conference (ITSC), 1393-1398.
 + Teknomo, K., Gardon, R. and Saloma, C. (2019), [Ideal Flow Traffic Analysis: A Case Study on a Campus Road Network](https://philjournalsci.dost.gov.ph/images/pdf/pjs_pdf/vol148no1/ideal-flow-trappic-analysis_.pdf), Philippine Journal of Science 148 (1): 5162.
 + Teknomo, K. (2018) [Ideal Flow of Markov Chain](https://www.worldscientific.com/doi/pdf/10.1142/S1793830918500738), Discrete Mathematics, Algorithms and Applications, doi: 10.1142/S1793830918500738 
 + [Teknomo, K.](http://people.revoledu.com/kardi/publication/index.html) and Gardon, R.W. (2017) Intersection Analysis Using the Ideal Flow Model, Proceeding of the IEEE 20th International Conference on Intelligent Transportation Systems, Oct 16-19, 2017, Yokohama, Japan
@@ -65,7 +66,7 @@ The following publications are the foundations of Ideal Flow analysis:
 + Gardon, R.W. and [Teknomo, K.](http://people.revoledu.com/kardi/publication/index.html) (2017) Analysis of the Distribution of Traffic Density Using the Ideal Flow Method and the Principle of Maximum Entropy, Proceedings of the 17th Philippine Computing Science Congress, Cebu City, March 2017
 + [Teknomo, K.](http://people.revoledu.com/kardi/publication/index.html) (2015) Ideal Flow Based on Random Walk on Directed Graph, The 9th International collaboration Symposium on Information, Production and Systems (ISIPS 2015) 16-18 Nov 2015, Waseda University, KitaKyushu, Japan. 
 
-You may also cite any of those papers if you use or improve this python library.
+You may also cite any of the above papers if you use or improve this python library.
 
 
 <a name="list_functions"></a>
