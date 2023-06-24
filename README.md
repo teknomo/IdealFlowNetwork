@@ -169,7 +169,7 @@ More tutorial on Ideal Flow Network is available in [Revoledu.com](http://people
 
 ## Development
 
-[Pull requests](https://github.com/teknomo/IdealFlowNetwork/pulls) are encouraged and always welcome. Pick an [issue]((https://github.com/teknomo/IdealFlowNetwork/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)) and help us out!
+[Pull requests](https://github.com/teknomo/IdealFlowNetwork/pulls) are encouraged and always welcome. Pick an [issue](https://github.com/teknomo/IdealFlowNetwork/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) and help us out!
 
 
 
