@@ -1,0 +1,14 @@
+setup.py
+IFN.egg-info/PKG-INFO
+IFN.egg-info/SOURCES.txt
+IFN.egg-info/dependency_links.txt
+IFN.egg-info/not-zip-safe
+IFN.egg-info/requires.txt
+IFN.egg-info/top_level.txt
+IdealFlow/Classifier.py
+IdealFlow/ImageProcessing.py
+IdealFlow/Network.py
+IdealFlow/TableProcessing.py
+IdealFlow/TextProcessing.py
+IdealFlow/__init__.py
+IdealFlow/network.py

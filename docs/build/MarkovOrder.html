@@ -1,0 +1,570 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial on Markov Order &mdash; Ideal Flow Network (IFN) 1.5.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/nbsphinx-code-cells.css?v=2aa19091" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=66a50015"></script>
+      <script src="_static/doctools.js?v=888ff710"></script>
+      <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Transportation Analysis" href="transportation_analysis.html" />
+    <link rel="prev" title="Data Science, Machine Learning and Artificial Intelligence" href="data_science_ai.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Ideal Flow Network (IFN)
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BeginnerGuide.html">Ideal Flow Network (IFN) - Beginner’s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BeginnerGuide.html#Basic-Use-of-IFN">Basic Use of IFN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">IFN Tutorial for General Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html#General-Network">General Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IFNtutorial.html">IFN Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IFN4OtherFields.html">How to Apply IFN in Your Field of Study?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_data_table.html">IFN for Classification of Data Table (Supervised Learning)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_data_table.html#Transportation-Mode-Choice">Transportation Mode Choice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_NLP.html">IFN Tutorial for Natural Language Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IFNspirituality.html">IFN Spirituality, System Thinking and Morality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_structure.html">Data Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit_tests.html">Unit Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IdealFlow.html">Ideal Flow Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">IdealFlow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_management.html">Data Management Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="node_management.html">Node Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="link_management.html">Link Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flow_management.html">Flow Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adjList.html">Adjacency List Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="path.html">Path and Trajectory Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="network_indices.html">Network Indices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="network_operation.html">Network Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matrix.html">Matrix Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stochastic.html">Stochastic and Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markov.html">Markov Chain Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="query_methods.html">Query and Search Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="neighborhood.html">Neighborhood</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ifn.html">Ideal Flow Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="random_walk.html">Random Walk and Random Cycle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="entropy.html">Entropy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cycle_analysis.html">Cycle Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="signature_analysis.html">Signature Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utility.html">Utilities and Helper Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_science_ai.html">Data Science, Machine Learning and Artificial Intelligence</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial on Markov Order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transportation_analysis.html">Transportation Analysis</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Ideal Flow Network (IFN)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Tutorial on Markov Order</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/MarkovOrder.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="Tutorial-on-Markov-Order">
+<h1>Tutorial on Markov Order<a class="headerlink" href="#Tutorial-on-Markov-Order" title="Permalink to this heading"></a></h1>
+<p>by <a class="reference external" href="https://people.revoledu.com/kardi/">Kardi Teknomo</a></p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">IdealFlow.Network</span> <span class="k">as</span> <span class="nn">net</span>         <span class="c1"># import package.module as alias</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Generate random ideal flow network for a given number of nodes.</span>
+<span class="n">max_capacity</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="n">num_nodes</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">IFN</span><span class="p">(</span><span class="s2">&quot;IFN&quot;</span><span class="p">)</span>         <span class="c1"># create new network</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">rand_capacity</span><span class="p">(</span><span class="n">num_nodes</span><span class="p">,</span> <span class="n">max_capacity</span><span class="p">)</span>
+<span class="n">F</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">capacity_to_ideal_flow</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
+<span class="n">scaling</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">global_scaling</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="s1">&#39;int&#39;</span><span class="p">)</span>
+<span class="n">n</span><span class="o">.</span><span class="n">equivalent_ifn</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">scaling</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+array([[  0., 112.,  16.,   0.,  32.],
+       [  0.,   0., 119.,   0.,   0.],
+       [  0.,   0.,   0.,  84.,  72.],
+       [  0.,   7.,  21.,   0.,  56.],
+       [160.,   0.,   0.,   0.,   0.]])
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">set_matrix</span><span class="p">(</span><span class="n">F</span><span class="p">,[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;#z#&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">n</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+
+<span class="n">traj1</span><span class="o">=</span><span class="n">n</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="s1">&#39;#z#&#39;</span><span class="p">)</span>
+<span class="n">traj2</span><span class="o">=</span><span class="n">n</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="n">trajectories</span> <span class="o">=</span> <span class="p">[</span><span class="n">traj1</span><span class="p">,</span><span class="n">traj2</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">traj</span> <span class="ow">in</span> <span class="n">trajectories</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;generated trajectory:&#39;</span><span class="p">,</span><span class="n">traj</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="nb">ord</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">13</span><span class="p">):</span>
+        <span class="n">trajSuper</span><span class="o">=</span><span class="n">n</span><span class="o">.</span><span class="n">order_markov_higher</span><span class="p">(</span><span class="n">traj</span><span class="p">,</span><span class="n">order</span><span class="o">=</span><span class="nb">ord</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;trajSuper&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">ord</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">trajSuper</span><span class="p">)</span>
+        <span class="n">tr1</span><span class="o">=</span><span class="n">n</span><span class="o">.</span><span class="n">order_markov_lower</span><span class="p">(</span><span class="n">trajSuper</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;back to traj1</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">tr1</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;a&#39;: {&#39;b&#39;: 0.16494845360824753, &#39;c&#39;: 0.02356406480117822, &#39;#z#&#39;: 0.04712812960235644}, &#39;b&#39;: {&#39;c&#39;: 0.17525773195876299}, &#39;c&#39;: {&#39;d&#39;: 0.12371134020618568, &#39;#z#&#39;: 0.10603829160530204}, &#39;d&#39;: {&#39;b&#39;: 0.010309278350515476, &#39;c&#39;: 0.030927835051546428, &#39;#z#&#39;: 0.0824742268041238}, &#39;#z#&#39;: {&#39;a&#39;: 0.23564064801178192}}
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/MarkovOrder_3_1.png" src="_images/MarkovOrder_3_1.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+generated trajectory: [&#39;#z#&#39;, &#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;#z#&#39;]
+
+trajSuper1
+ [&#39;#z#&#39;, &#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;#z#&#39;]
+back to traj1
+ [&#39;#z#&#39;, &#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;#z#&#39;]
+
+
+trajSuper2
+ [&#39;#z#&#39;, &#39;a|c&#39;, &#39;c|d&#39;, &#39;#z#&#39;]
+back to traj1
+ [&#39;#z#&#39;, &#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;#z#&#39;]
+
+
+trajSuper3
+ [&#39;#z#&#39;, &#39;a|c|d&#39;, &#39;#z#&#39;]
+back to traj1
+ [&#39;#z#&#39;, &#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;#z#&#39;]
+
+
+trajSuper4
+ [&#39;#z#&#39;, &#39;a|c|d&#39;, &#39;#z#&#39;]
+back to traj1
+ [&#39;#z#&#39;, &#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;#z#&#39;]
+
+
+trajSuper5
+ [&#39;#z#&#39;, &#39;a|c|d&#39;, &#39;#z#&#39;]
+back to traj1
+ [&#39;#z#&#39;, &#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;#z#&#39;]
+
+
+trajSuper6
+ [&#39;#z#&#39;, &#39;a|c|d&#39;, &#39;#z#&#39;]
+back to traj1
+ [&#39;#z#&#39;, &#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;#z#&#39;]
+
+
+trajSuper7
+ [&#39;#z#&#39;, &#39;a|c|d&#39;, &#39;#z#&#39;]
+back to traj1
+ [&#39;#z#&#39;, &#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;#z#&#39;]
+
+
+trajSuper8
+ [&#39;#z#&#39;, &#39;a|c|d&#39;, &#39;#z#&#39;]
+back to traj1
+ [&#39;#z#&#39;, &#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;#z#&#39;]
+
+
+trajSuper9
+ [&#39;#z#&#39;, &#39;a|c|d&#39;, &#39;#z#&#39;]
+back to traj1
+ [&#39;#z#&#39;, &#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;#z#&#39;]
+
+
+trajSuper10
+ [&#39;#z#&#39;, &#39;a|c|d&#39;, &#39;#z#&#39;]
+back to traj1
+ [&#39;#z#&#39;, &#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;#z#&#39;]
+
+
+trajSuper11
+ [&#39;#z#&#39;, &#39;a|c|d&#39;, &#39;#z#&#39;]
+back to traj1
+ [&#39;#z#&#39;, &#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;#z#&#39;]
+
+
+trajSuper12
+ [&#39;#z#&#39;, &#39;a|c|d&#39;, &#39;#z#&#39;]
+back to traj1
+ [&#39;#z#&#39;, &#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;#z#&#39;]
+
+
+generated trajectory: [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;#z#&#39;, &#39;a&#39;]
+
+trajSuper1
+ [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;#z#&#39;, &#39;a&#39;]
+back to traj1
+ [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;a&#39;]
+
+
+trajSuper2
+ [&#39;a|b&#39;, &#39;b|c&#39;, &#39;#z#&#39;, &#39;#z#&#39;]
+back to traj1
+ [&#39;#z#&#39;, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;#z#&#39;]
+
+
+trajSuper3
+ [&#39;a|b|c&#39;, &#39;#z#&#39;, &#39;#z#&#39;]
+back to traj1
+ [&#39;#z#&#39;, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;#z#&#39;]
+
+
+trajSuper4
+ [&#39;#z#&#39;, &#39;#z#&#39;]
+back to traj1
+ [&#39;#z#&#39;, &#39;#z#&#39;]
+
+
+trajSuper5
+ [&#39;#z#&#39;, &#39;#z#&#39;]
+back to traj1
+ [&#39;#z#&#39;, &#39;#z#&#39;]
+
+
+trajSuper6
+ [&#39;#z#&#39;, &#39;#z#&#39;]
+back to traj1
+ [&#39;#z#&#39;, &#39;#z#&#39;]
+
+
+trajSuper7
+ [&#39;#z#&#39;, &#39;#z#&#39;]
+back to traj1
+ [&#39;#z#&#39;, &#39;#z#&#39;]
+
+
+trajSuper8
+ [&#39;#z#&#39;, &#39;#z#&#39;]
+back to traj1
+ [&#39;#z#&#39;, &#39;#z#&#39;]
+
+
+trajSuper9
+ [&#39;#z#&#39;, &#39;#z#&#39;]
+back to traj1
+ [&#39;#z#&#39;, &#39;#z#&#39;]
+
+
+trajSuper10
+ [&#39;#z#&#39;, &#39;#z#&#39;]
+back to traj1
+ [&#39;#z#&#39;, &#39;#z#&#39;]
+
+
+trajSuper11
+ [&#39;#z#&#39;, &#39;#z#&#39;]
+back to traj1
+ [&#39;#z#&#39;, &#39;#z#&#39;]
+
+
+trajSuper12
+ [&#39;#z#&#39;, &#39;#z#&#39;]
+back to traj1
+ [&#39;#z#&#39;, &#39;#z#&#39;]
+
+
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">set_matrix</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">n</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+
+<span class="n">traj1</span><span class="o">=</span><span class="n">n</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="n">traj2</span><span class="o">=</span><span class="n">n</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">trajectories</span> <span class="o">=</span> <span class="p">[</span><span class="n">traj1</span><span class="p">,</span><span class="n">traj2</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">traj</span> <span class="ow">in</span> <span class="n">trajectories</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;generated trajectory:&#39;</span><span class="p">,</span><span class="n">traj</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="nb">ord</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">13</span><span class="p">):</span>
+        <span class="n">trajSuper</span><span class="o">=</span><span class="n">n</span><span class="o">.</span><span class="n">order_markov_higher</span><span class="p">(</span><span class="n">traj</span><span class="p">,</span><span class="n">order</span><span class="o">=</span><span class="nb">ord</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;trajSuper&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">ord</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">trajSuper</span><span class="p">)</span>
+        <span class="n">tr1</span><span class="o">=</span><span class="n">n</span><span class="o">.</span><span class="n">order_markov_lower</span><span class="p">(</span><span class="n">trajSuper</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;back to traj1</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">tr1</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;a&#39;: {&#39;b&#39;: 0.16494845360824753, &#39;c&#39;: 0.02356406480117822, &#39;e&#39;: 0.04712812960235644}, &#39;b&#39;: {&#39;c&#39;: 0.17525773195876299}, &#39;c&#39;: {&#39;d&#39;: 0.12371134020618568, &#39;e&#39;: 0.10603829160530204}, &#39;d&#39;: {&#39;b&#39;: 0.010309278350515476, &#39;c&#39;: 0.030927835051546428, &#39;e&#39;: 0.0824742268041238}, &#39;e&#39;: {&#39;a&#39;: 0.23564064801178192}}
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/MarkovOrder_4_1.png" src="_images/MarkovOrder_4_1.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+generated trajectory: [&#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;]
+
+trajSuper1
+ [&#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;]
+back to traj1
+ [&#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;]
+
+
+trajSuper2
+ [&#39;a|c&#39;, &#39;c|d&#39;, &#39;d|c&#39;, &#39;c|d&#39;, &#39;d|e&#39;, &#39;e|a&#39;]
+back to traj1
+ [&#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;]
+
+
+trajSuper3
+ [&#39;a|c|d&#39;, &#39;c|d|c&#39;, &#39;d|c|d&#39;, &#39;c|d|e&#39;, &#39;d|e|a&#39;]
+back to traj1
+ [&#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;]
+
+
+trajSuper4
+ [&#39;a|c|d|c&#39;, &#39;c|d|c|d&#39;, &#39;d|c|d|e&#39;, &#39;c|d|e|a&#39;]
+back to traj1
+ [&#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;]
+
+
+trajSuper5
+ [&#39;a|c|d|c|d&#39;, &#39;c|d|c|d|e&#39;, &#39;d|c|d|e|a&#39;]
+back to traj1
+ [&#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;]
+
+
+trajSuper6
+ [&#39;a|c|d|c|d|e&#39;, &#39;c|d|c|d|e|a&#39;]
+back to traj1
+ [&#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;]
+
+
+trajSuper7
+ [&#39;a|c|d|c|d|e|a&#39;]
+back to traj1
+ [&#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;]
+
+
+trajSuper8
+ [&#39;a|c|d|c|d|e|a&#39;]
+back to traj1
+ [&#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;]
+
+
+trajSuper9
+ [&#39;a|c|d|c|d|e|a&#39;]
+back to traj1
+ [&#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;]
+
+
+trajSuper10
+ [&#39;a|c|d|c|d|e|a&#39;]
+back to traj1
+ [&#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;]
+
+
+trajSuper11
+ [&#39;a|c|d|c|d|e|a&#39;]
+back to traj1
+ [&#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;]
+
+
+trajSuper12
+ [&#39;a|c|d|c|d|e|a&#39;]
+back to traj1
+ [&#39;a&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;]
+
+
+generated trajectory: [&#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;, &#39;b&#39;]
+
+trajSuper1
+ [&#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;, &#39;b&#39;]
+back to traj1
+ [&#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;, &#39;b&#39;]
+
+
+trajSuper2
+ [&#39;b|c&#39;, &#39;c|d&#39;, &#39;d|c&#39;, &#39;c|d&#39;, &#39;d|e&#39;, &#39;e|a&#39;, &#39;a|b&#39;]
+back to traj1
+ [&#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;, &#39;b&#39;]
+
+
+trajSuper3
+ [&#39;b|c|d&#39;, &#39;c|d|c&#39;, &#39;d|c|d&#39;, &#39;c|d|e&#39;, &#39;d|e|a&#39;, &#39;e|a|b&#39;]
+back to traj1
+ [&#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;, &#39;b&#39;]
+
+
+trajSuper4
+ [&#39;b|c|d|c&#39;, &#39;c|d|c|d&#39;, &#39;d|c|d|e&#39;, &#39;c|d|e|a&#39;, &#39;d|e|a|b&#39;]
+back to traj1
+ [&#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;, &#39;b&#39;]
+
+
+trajSuper5
+ [&#39;b|c|d|c|d&#39;, &#39;c|d|c|d|e&#39;, &#39;d|c|d|e|a&#39;, &#39;c|d|e|a|b&#39;]
+back to traj1
+ [&#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;, &#39;b&#39;]
+
+
+trajSuper6
+ [&#39;b|c|d|c|d|e&#39;, &#39;c|d|c|d|e|a&#39;, &#39;d|c|d|e|a|b&#39;]
+back to traj1
+ [&#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;, &#39;b&#39;]
+
+
+trajSuper7
+ [&#39;b|c|d|c|d|e|a&#39;, &#39;c|d|c|d|e|a|b&#39;]
+back to traj1
+ [&#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;, &#39;b&#39;]
+
+
+trajSuper8
+ [&#39;b|c|d|c|d|e|a|b&#39;]
+back to traj1
+ [&#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;, &#39;b&#39;]
+
+
+trajSuper9
+ [&#39;b|c|d|c|d|e|a|b&#39;]
+back to traj1
+ [&#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;, &#39;b&#39;]
+
+
+trajSuper10
+ [&#39;b|c|d|c|d|e|a|b&#39;]
+back to traj1
+ [&#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;, &#39;b&#39;]
+
+
+trajSuper11
+ [&#39;b|c|d|c|d|e|a|b&#39;]
+back to traj1
+ [&#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;, &#39;b&#39;]
+
+
+trajSuper12
+ [&#39;b|c|d|c|d|e|a|b&#39;]
+back to traj1
+ [&#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;, &#39;b&#39;]
+
+
+</pre></div></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="data_science_ai.html" class="btn btn-neutral float-left" title="Data Science, Machine Learning and Artificial Intelligence" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="transportation_analysis.html" class="btn btn-neutral float-right" title="Transportation Analysis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Kardi Teknomo.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

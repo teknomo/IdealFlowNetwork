@@ -1,1 +1,0 @@
- from IdealFlowNetwork import IFN

@@ -1,0 +1,238 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Structure &mdash; Ideal Flow Network (IFN) 1.5.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=66a50015"></script>
+      <script src="_static/doctools.js?v=888ff710"></script>
+      <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Unit Tests" href="unit_tests.html" />
+    <link rel="prev" title="IFN Spirituality, System Thinking and Morality" href="IFNspirituality.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Ideal Flow Network (IFN)
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BeginnerGuide.html">Ideal Flow Network (IFN) - Beginner’s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BeginnerGuide.html#Basic-Use-of-IFN">Basic Use of IFN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">IFN Tutorial for General Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html#General-Network">General Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IFNtutorial.html">IFN Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IFN4OtherFields.html">How to Apply IFN in Your Field of Study?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_data_table.html">IFN for Classification of Data Table (Supervised Learning)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_data_table.html#Transportation-Mode-Choice">Transportation Mode Choice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_NLP.html">IFN Tutorial for Natural Language Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IFNspirituality.html">IFN Spirituality, System Thinking and Morality</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#network-directed-graph">1.      Network Directed Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#matrix">2.      Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#naming-convention">Naming Convention</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coding-standard">Coding Standard</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="unit_tests.html">Unit Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IdealFlow.html">Ideal Flow Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">IdealFlow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_management.html">Data Management Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="node_management.html">Node Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="link_management.html">Link Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flow_management.html">Flow Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adjList.html">Adjacency List Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="path.html">Path and Trajectory Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="network_indices.html">Network Indices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="network_operation.html">Network Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matrix.html">Matrix Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stochastic.html">Stochastic and Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markov.html">Markov Chain Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="query_methods.html">Query and Search Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="neighborhood.html">Neighborhood</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ifn.html">Ideal Flow Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="random_walk.html">Random Walk and Random Cycle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="entropy.html">Entropy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cycle_analysis.html">Cycle Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="signature_analysis.html">Signature Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utility.html">Utilities and Helper Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_science_ai.html">Data Science, Machine Learning and Artificial Intelligence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MarkovOrder.html">Tutorial on Markov Order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transportation_analysis.html">Transportation Analysis</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Ideal Flow Network (IFN)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Data Structure</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/data_structure.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-structure">
+<h1>Data Structure<a class="headerlink" href="#data-structure" title="Permalink to this heading"></a></h1>
+<p>IFN is basically based on two kind of representations:</p>
+<section id="network-directed-graph">
+<h2>1.      Network Directed Graph<a class="headerlink" href="#network-directed-graph" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>A network is represented as Adjacency List, which is Python nested dictionary</p></li>
+<li><p>A node is represented by a string name in the key of adjacency list</p></li>
+<li><p>A link is always directed, the start node is key of the first level of the adjacency list and the end node is the key of the second level of the adjacency list.</p></li>
+<li><p>The weight in the value of the second level of the adjacency list. The weight can be integer or float (e.g. probability)</p></li>
+</ul>
+<p>Example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span>    <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="mi">77</span><span class="p">},</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;e&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span> <span class="s1">&#39;e&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">}}</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt;</span>
+<span class="go">        {&#39;a&#39;: {&#39;b&#39;: 0.012, &#39;c&#39;: 0.012, &#39;d&#39;: 0.916},</span>
+<span class="go">        &#39;b&#39;: {&#39;c&#39;: 0.012, &#39;e&#39;: 0.012},</span>
+<span class="go">        &#39;c&#39;: {&#39;e&#39;: 0.012},</span>
+<span class="go">        &#39;d&#39;: {&#39;c&#39;: 0.012},</span>
+<span class="go">        &#39;e&#39;: {&#39;a&#39;: 0.012}}</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt;</span>
+<span class="go">        {&#39;Calgary&#39;: {}, &#39;Chicago&#39;: {&#39;Denver&#39;: 1000},</span>
+<span class="go">        &#39;Denver&#39;: {&#39;Houston&#39;: 1500, &#39;Los Angeles&#39;: 1000, &#39;Urbana&#39;: 1000},</span>
+<span class="go">        &#39;Houston&#39;: {&#39;Los Angeles&#39;: 1500}, &#39;Los Angeles&#39;: {},</span>
+<span class="go">        &#39;New York&#39;: {&#39;Chicago&#39;: 1000, &#39;Denver&#39;: 1900, &#39;Toronto&#39;: 800},</span>
+<span class="go">        &#39;Toronto&#39;: {&#39;Calgary&#39;: 1500, &#39;Chicago&#39;: 500, &#39;Los Angeles&#39;: 1800}, &#39;Urbana&#39;: {}}</span>
+</pre></div>
+</div>
+</section>
+<section id="matrix">
+<h2>2.      Matrix<a class="headerlink" href="#matrix" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Weighted Adjacency Matrix, which is Python two-dimensional array together with list nodes.</p></li>
+</ul>
+<p>Example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt;</span>
+<span class="go">        [[0, 1, 1, 77, 0],</span>
+<span class="go">        [0, 0, 1, 0, 1],</span>
+<span class="go">        [0, 0, 0, 0, 1],</span>
+<span class="go">        [0, 0, 1, 0, 0],</span>
+<span class="go">        [1, 0, 0, 0, 0]],</span>
+<span class="go">        [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;]</span>
+</pre></div>
+</div>
+<p>Function to convert matrix to adjacency list is <code class="xref py py-meth docutils literal notranslate"><span class="pre">matrix_to_adj_list()</span></code>.</p>
+<p>Function to convert adjacency list to matrix is <code class="xref py py-meth docutils literal notranslate"><span class="pre">adj_list_to_matrix()</span></code>.</p>
+<ul class="simple">
+<li><p>A Path or a trajectory is represented as node sequence, which is a Python list of strings.</p></li>
+</ul>
+<p>Example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="naming-convention">
+<h2>Naming Convention<a class="headerlink" href="#naming-convention" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Name for each IFN to tell the class</p></li>
+<li><p>Saving IFN would be the same as the name</p></li>
+<li><p>All private functions would have name start and end with double underscore __.</p></li>
+<li><p>Class name start with capital letter</p></li>
+<li><p>Function name start with lower letter</p></li>
+<li><p>A = Adjacency matrix</p></li>
+<li><p>B = Incidence matrix</p></li>
+<li><p>C = Capacity matrix</p></li>
+<li><p>F = Flow matrix</p></li>
+<li><p>S = Stochastic matrix</p></li>
+<li><p>sR = sum of rows</p></li>
+<li><p>sC = sum of columns</p></li>
+<li><p>kappa = total flow</p></li>
+<li><p>pi = node vector (steady state)</p></li>
+<li><p>[m,n] = matrix size</p></li>
+</ul>
+</section>
+<section id="coding-standard">
+<h2>Coding Standard<a class="headerlink" href="#coding-standard" title="Permalink to this heading"></a></h2>
+<p>As our agreements, we use the following terminologies</p>
+<ul class="simple">
+<li><p>Network consists of nodes and links (= vertices and edges in graph theory)</p></li>
+<li><p>Trajectory = Path = node sequence = link sequence</p></li>
+<li><p>Cycle = path that have the same start and end</p></li>
+<li><p>Flow = either link weight, node weight or both</p></li>
+</ul>
+<p>All private functions would have name start and end with double underscore __.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="IFNspirituality.html" class="btn btn-neutral float-left" title="IFN Spirituality, System Thinking and Morality" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="unit_tests.html" class="btn btn-neutral float-right" title="Unit Tests" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Kardi Teknomo.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

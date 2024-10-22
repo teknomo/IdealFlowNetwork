@@ -1,0 +1,1112 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ideal Flow Network (IFN) - Beginner’s Guide &mdash; Ideal Flow Network (IFN) 1.5.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/nbsphinx-code-cells.css?v=2aa19091" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=66a50015"></script>
+      <script src="_static/doctools.js?v=888ff710"></script>
+      <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="IFN Tutorial for General Network" href="tutorial.html" />
+    <link rel="prev" title="Overview" href="overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Ideal Flow Network (IFN)
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Ideal Flow Network (IFN) - Beginner’s Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#How-To-Install:">How To Install:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#Basic-Use-of-IFN">Basic Use of IFN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Basic-Data-Structure-of-IFN">Basic Data Structure of IFN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Expandable-Network">Expandable Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Indicators">Indicators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Testing">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Ideal-Flow-Network">Ideal Flow Network</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">IFN Tutorial for General Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html#General-Network">General Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IFNtutorial.html">IFN Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IFN4OtherFields.html">How to Apply IFN in Your Field of Study?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_data_table.html">IFN for Classification of Data Table (Supervised Learning)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_data_table.html#Transportation-Mode-Choice">Transportation Mode Choice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_NLP.html">IFN Tutorial for Natural Language Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IFNspirituality.html">IFN Spirituality, System Thinking and Morality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_structure.html">Data Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit_tests.html">Unit Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IdealFlow.html">Ideal Flow Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">IdealFlow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_management.html">Data Management Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="node_management.html">Node Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="link_management.html">Link Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flow_management.html">Flow Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adjList.html">Adjacency List Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="path.html">Path and Trajectory Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="network_indices.html">Network Indices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="network_operation.html">Network Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matrix.html">Matrix Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stochastic.html">Stochastic and Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markov.html">Markov Chain Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="query_methods.html">Query and Search Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="neighborhood.html">Neighborhood</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ifn.html">Ideal Flow Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="random_walk.html">Random Walk and Random Cycle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="entropy.html">Entropy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cycle_analysis.html">Cycle Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="signature_analysis.html">Signature Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utility.html">Utilities and Helper Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_science_ai.html">Data Science, Machine Learning and Artificial Intelligence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MarkovOrder.html">Tutorial on Markov Order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transportation_analysis.html">Transportation Analysis</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Ideal Flow Network (IFN)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Ideal Flow Network (IFN) - Beginner’s Guide</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/BeginnerGuide.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="Ideal-Flow-Network-(IFN)---Beginner's-Guide">
+<h1>Ideal Flow Network (IFN) - Beginner’s Guide<a class="headerlink" href="#Ideal-Flow-Network-(IFN)---Beginner's-Guide" title="Permalink to this heading"></a></h1>
+<p>by <a class="reference external" href="https://people.revoledu.com/kardi/">Kardi Teknomo</a></p>
+<section id="How-To-Install:">
+<h2>How To Install:<a class="headerlink" href="#How-To-Install:" title="Permalink to this heading"></a></h2>
+<p>You need to have Python installed. Go to <a class="reference external" href="https://pypi.org/project/IdealFlowNetwork/">Pypi.org</a> and find IdealFlowNetwork version 1.5.1 (or latest version)</p>
+<blockquote>
+<div><p>pip install IdealFlowNetwork</p>
+</div></blockquote>
+<p>Alternatively, download the zip file from <a class="reference external" href="https://github.com/teknomo/IdealFlowNetwork">GitHub</a>, unzip the file in a folder. 1. Go to folder <em>pkg</em></p>
+<blockquote>
+<div><p>cd <em>your_folder_name</em><code class="docutils literal notranslate"><span class="pre">/pkg</span></code></p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>In command Prompt &gt; <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">.</span></code></p></li>
+</ol>
+<blockquote>
+<div><p>pip install .</p>
+</div></blockquote>
+<p>It copies the package files to your Python environment. If you computer does not have pip, check <a class="reference external" href="https://pip.pypa.io/en/stable/installation/#ensurepip">ensurepip documentation</a></p>
+</section>
+</section>
+<section id="Basic-Use-of-IFN">
+<h1>Basic Use of IFN<a class="headerlink" href="#Basic-Use-of-IFN" title="Permalink to this heading"></a></h1>
+<p>In this tutorial, you will learn how to use Ideal Flow Network module for defining and analyzing general networks.</p>
+<p>To use the Ideal Flow Network module, you just need to import it.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IdealFlow</span> <span class="kn">import</span> <span class="n">Network</span> <span class="k">as</span> <span class="n">net</span>  <span class="c1"># from package import module as alias</span>
+</pre></div>
+</div>
+</div>
+<p>The Network module contains IFN class. Let us call the IFN class and display the version.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">IFN</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;IFN version:&#39;</span><span class="p">,</span> <span class="n">n</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+IFN version: 1.5.1
+</pre></div></div>
+</div>
+<p>If you set the name of the network, you can call it’s name as its formal <em>representation</em>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">IFN</span><span class="p">(</span><span class="s2">&quot;My First Network&quot;</span><span class="p">)</span>
+<span class="n">n</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+My First Network
+</pre></div></div>
+</div>
+<p>However, printing it would produce the adjacency list. Since we did not yet define any link or node, it is just an empty adjacency list.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{}
+</pre></div></div>
+</div>
+<p>In IFN class, a network is expanded by adding links. When you add a link, the nodes is automatically added.</p>
+<p>You can add a link by specifying the <code class="docutils literal notranslate"><span class="pre">start_node</span></code> and <code class="docutils literal notranslate"><span class="pre">end_node</span></code> and optionally, you can specify the link <code class="docutils literal notranslate"><span class="pre">weight</span></code>, which is caled <em>``flow``</em>. If you do not specify the link flow, by default, the flow is equal to one.</p>
+<p>When a link does not exist, <code class="docutils literal notranslate"><span class="pre">add_link(start_node,end_node,[flow])</span></code> would create that link. When the link already exists, would only update by adding the flow.</p>
+<p>Printing the network, would give you the string of adjacency list of the network.</p>
+<p>You can <code class="docutils literal notranslate"><span class="pre">show()</span></code> the network to visualize it as a figure. The total flow in the network is indicated as <span class="math notranslate nohighlight">\(\kappa\)</span> in the totle of the figure, after the network name.</p>
+<p>In the example below, node <em>b</em> is a sink node, therefore it has empty <em>end_node</em>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">add_link</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">n</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;a&#39;: {&#39;b&#39;: 3}, &#39;b&#39;: {}}
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/BeginnerGuide_10_1.png" src="_images/BeginnerGuide_10_1.png" />
+</div>
+</div>
+<p>You don’t need to add node first when you add a link. Method <code class="docutils literal notranslate"><span class="pre">add_node(node_id)</span></code> would add a new node to the network if that node does not exist. This method is useful for adding an isolated node.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>  <span class="c1"># add an isolated node &#39;d&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">n</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;a&#39;: {&#39;b&#39;: 3}, &#39;b&#39;: {}, &#39;c&#39;: {}}
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/BeginnerGuide_12_1.png" src="_images/BeginnerGuide_12_1.png" />
+</div>
+</div>
+<p>We can delete the isolated node. Property <code class="docutils literal notranslate"><span class="pre">nodes</span></code> would return the list of nodes.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">delete_node</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>
+<span class="n">n</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">nodes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/BeginnerGuide_14_0.png" src="_images/BeginnerGuide_14_0.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;a&#39;, &#39;b&#39;]
+</pre></div></div>
+</div>
+<p>Let us now add link <em>ac</em></p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">add_link</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">n</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;a&#39;: {&#39;b&#39;: 3, &#39;c&#39;: 1}, &#39;b&#39;: {}, &#39;c&#39;: {}}
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/BeginnerGuide_16_1.png" src="_images/BeginnerGuide_16_1.png" />
+</div>
+</div>
+<p>Adding a link on the existing link will only update the link flow. Observe that link ‘ac’ is now has updated link flow.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">n</span><span class="o">.</span><span class="n">add_link</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">n</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;a&#39;: {&#39;b&#39;: 3, &#39;c&#39;: 2}, &#39;b&#39;: {}, &#39;c&#39;: {}}
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/BeginnerGuide_18_1.png" src="_images/BeginnerGuide_18_1.png" />
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">len</span></code> of the netwok would show the number of nodes.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+3
+</pre></div></div>
+</div>
+<p>We can view the link flow by getting the link item.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+3
+</pre></div></div>
+</div>
+<p>We can also set the link flow directly by replacing its value.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">)]</span><span class="o">=</span><span class="mi">8</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">n</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;a&#39;: {&#39;b&#39;: 8, &#39;c&#39;: 2}, &#39;b&#39;: {}, &#39;c&#39;: {}}
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/BeginnerGuide_24_1.png" src="_images/BeginnerGuide_24_1.png" />
+</div>
+</div>
+<p>The nodes in the network (which is the keys in adjacency list) forms an iterator that can be called in a loop.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">add_link</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">n</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+a
+b
+c
+</pre></div></div>
+</div>
+<p>The flow in each node is shown as a dictionary by property <code class="docutils literal notranslate"><span class="pre">node_flow</span></code>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">nodes_flow</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;a&#39;: 10, &#39;b&#39;: 1, &#39;c&#39;: 0}
+</pre></div></div>
+</div>
+<section id="Basic-Data-Structure-of-IFN">
+<h2>Basic Data Structure of IFN<a class="headerlink" href="#Basic-Data-Structure-of-IFN" title="Permalink to this heading"></a></h2>
+<p>The basic data structure of the Ideal Flow Network is <em>adjacency list</em> or <em>matrix</em>. The adjacency list is a dictionary where the keys are the <em>from-nodes</em> and the values are dictionary of the <em>to-node</em> and its flow.</p>
+<p>IFN is adjacency-list-based network. Any change of the adjacency list, it would also change the network. We can replace the entire data inside the network by <code class="docutils literal notranslate"><span class="pre">set_data(adjList)</span></code> method. Method <code class="docutils literal notranslate"><span class="pre">get_data()</span></code> would return the internal data structure of adjacency list.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adjList</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">},</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;c&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">},</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">}}</span>
+<span class="n">n</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">adjList</span><span class="p">)</span>
+<span class="n">n</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+<span class="n">n</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/BeginnerGuide_30_0.png" src="_images/BeginnerGuide_30_0.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;a&#39;: {&#39;b&#39;: 1, &#39;c&#39;: 3}, &#39;b&#39;: {&#39;c&#39;: 2}, &#39;c&#39;: {&#39;a&#39;: 5}}
+</pre></div></div>
+</div>
+<p>Setting link flow to zero delete would delete the link but not delete the nodes. In the example above, link <code class="docutils literal notranslate"><span class="pre">ab</span></code> has flow = 1. We can reduce this to zero.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">reduce_link_flow</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">n</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/BeginnerGuide_32_0.png" src="_images/BeginnerGuide_32_0.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;a&#39;: {&#39;c&#39;: 3}, &#39;b&#39;: {&#39;c&#39;: 2}, &#39;c&#39;: {&#39;a&#39;: 5}}
+</pre></div></div>
+</div>
+<p>Deleting non-existence of link, will just print a warning.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">delete_link</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Warning: attempt to delete link `cb` but the link start/end with &#39;b&#39; does not exist.
+{&#39;a&#39;: {&#39;c&#39;: 3}, &#39;b&#39;: {&#39;c&#39;: 2}, &#39;c&#39;: {&#39;a&#39;: 5}}
+</pre></div></div>
+</div>
+<p>Unlike Graph theory, when we delete link in IFN, it would also delete the isolated nodes related to that deleted link.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">delete_link</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>
+<span class="n">n</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/BeginnerGuide_36_0.png" src="_images/BeginnerGuide_36_0.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;a&#39;: {&#39;c&#39;: 3}, &#39;c&#39;: {&#39;a&#39;: 5}}
+</pre></div></div>
+</div>
+<p>Link flow can be negative but cannot be zero because zero link flow would remove the link from the network.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">)]</span><span class="o">=-</span><span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">n</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;a&#39;: {&#39;c&#39;: 3, &#39;b&#39;: -1}, &#39;c&#39;: {&#39;a&#39;: 5}}
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/BeginnerGuide_38_1.png" src="_images/BeginnerGuide_38_1.png" />
+</div>
+</div>
+<p>IFN can also be represented as a matrix and a list of nodes. Method <code class="docutils literal notranslate"><span class="pre">get_matrix()</span></code> would produce the internal capacity matrix and list of nodes of the network.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">,</span> <span class="n">listNode</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">get_matrix</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;C:&#39;</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">list nodes:&#39;</span><span class="p">,</span> <span class="n">listNode</span>  <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+C: [[0, -1, 3], [0, 0, 0], [5, 0, 0]]
+list nodes: [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]
+</pre></div></div>
+</div>
+<p>To set the network based on capacity matrix and list of nodes, we can use method <code class="docutils literal notranslate"><span class="pre">set_matrix(C,list_node)</span></code>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+<span class="n">n</span><span class="o">.</span><span class="n">set_matrix</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="n">listNode</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">n</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;a&#39;: {&#39;b&#39;: 1, &#39;c&#39;: 3}, &#39;b&#39;: {&#39;c&#39;: 4}, &#39;c&#39;: {&#39;b&#39;: 2}}
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/BeginnerGuide_42_1.png" src="_images/BeginnerGuide_42_1.png" />
+</div>
+</div>
+<p>What will happen if we delete the existing node ‘c’? Deleting a node would automatically delete the associated links connected to that deleted node. This behavior is as expected, exactly just like in graph theory.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">delete_node</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>
+
+<span class="n">n</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/BeginnerGuide_44_0.png" src="_images/BeginnerGuide_44_0.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;a&#39;: {&#39;b&#39;: 1}, &#39;b&#39;: {}}
+</pre></div></div>
+</div>
+</section>
+<section id="Expandable-Network">
+<h2>Expandable Network<a class="headerlink" href="#Expandable-Network" title="Permalink to this heading"></a></h2>
+<p>This is where the fun of IFN begins.</p>
+<p>The expandable network is a type of network that can be dynamically expanded or contracted as needed. The IFN is an expandable network. We can expand the network by setting or assigning trajectories. Trajectories is a path represented by a list of nodes in sequence. We can also contract the network by removing trajectories through unlearn method. If the node or link exists, the flow would be updated by adding flow. By default it is adding flow with one unit, but we can set the change of flow in
+the parameter. If the node or link does not exist, it would automatically create nodes or links.</p>
+<p>Method <code class="docutils literal notranslate"><span class="pre">assign(trajectory)</span></code> would add one unit of flow along the trajectory. It would update the link flow if the link exists, or create link if the link does not exist.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">IFN</span><span class="p">(</span><span class="s2">&quot;Expandable Network&quot;</span><span class="p">)</span>
+<span class="n">trajectory</span> <span class="o">=</span>  <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
+<span class="n">n</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">trajectory</span><span class="p">)</span>
+<span class="n">n</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<br/></pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/BeginnerGuide_46_0.png" src="_images/BeginnerGuide_46_0.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;a&#39;: {&#39;b&#39;: 1}, &#39;b&#39;: {&#39;c&#39;: 1}, &#39;c&#39;: {&#39;d&#39;: 1}, &#39;d&#39;: {&#39;e&#39;: 1}, &#39;e&#39;: {&#39;a&#39;: 1}}
+</pre></div></div>
+</div>
+<p>We can also use more generic method <code class="docutils literal notranslate"><span class="pre">set_path(trajectory,delta_flow)</span></code> method to assign trajectory with any change of flow (which is not necessarily one unit of flow).</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trajectory</span> <span class="o">=</span>  <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]</span>
+<span class="n">n</span><span class="o">.</span><span class="n">set_path</span><span class="p">(</span><span class="n">trajectory</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">n</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/BeginnerGuide_48_0.png" src="_images/BeginnerGuide_48_0.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;a&#39;: {&#39;b&#39;: 1, &#39;e&#39;: 2}, &#39;b&#39;: {&#39;c&#39;: 3}, &#39;c&#39;: {&#39;d&#39;: 1, &#39;a&#39;: 2}, &#39;d&#39;: {&#39;e&#39;: 1}, &#39;e&#39;: {&#39;a&#39;: 1}}
+</pre></div></div>
+</div>
+<p>Using method <code class="docutils literal notranslate"><span class="pre">generate(startNode,is_cycle=True)</span></code>, we can generate random trajectory based on the network and start node. When is_cycle=True it would generate random cycle, otherwise it would generate based on random walk of random length between 1 and total nodes. It is possible that it might generate internal cycles in the generated trajectory.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;a&#39;, &#39;e&#39;, &#39;a&#39;, &#39;e&#39;, &#39;a&#39;, &#39;b&#39;]
+[&#39;b&#39;, &#39;c&#39;, &#39;a&#39;, &#39;e&#39;, &#39;a&#39;, &#39;e&#39;, &#39;a&#39;, &#39;e&#39;, &#39;a&#39;, &#39;e&#39;, &#39;a&#39;, &#39;e&#39;, &#39;a&#39;, &#39;e&#39;, &#39;a&#39;, &#39;b&#39;]
+[&#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;]
+[&#39;b&#39;, &#39;c&#39;]
+</pre></div></div>
+</div>
+<p>We can use <code class="docutils literal notranslate"><span class="pre">get_path(startNode,</span> <span class="pre">endNode)</span></code> get the path from start node to end node. This path is not necessarily the shortest path. The search for path is based on Depth First Search (DFS).</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;]
+</pre></div></div>
+</div>
+<p>If the path does not exist, it will produce an empty list</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;e&#39;, &#39;a&#39;]
+</pre></div></div>
+</div>
+<p>We can also find all paths from start node to end node by method <code class="docutils literal notranslate"><span class="pre">find_all_paths(startNode,</span> <span class="pre">endNode)</span></code></p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">n</span><span class="o">.</span><span class="n">find_all_paths</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;], [&#39;a&#39;, &#39;e&#39;]]
+</pre></div></div>
+</div>
+<p>We can find the shortest path by method <code class="docutils literal notranslate"><span class="pre">shortest_path(startNode,</span> <span class="pre">endNode)</span></code>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">.</span><span class="n">shortest_path</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;a&#39;, &#39;e&#39;]
+</pre></div></div>
+</div>
+<p>We can find the all shortest path matrix by method <code class="docutils literal notranslate"><span class="pre">all_shortest_path()</span></code>. The method produces path matrix and list of nodes. This method is based on Floyd-Warshall algorithm. The matrix value represents the sum of flow along the shortest path between a pair of nodes (row as start node, column as end node). If the value in the path matrix is <em>inf</em> it indicates there is no path between the start node and the end node.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matrix</span><span class="p">,</span><span class="n">list_nodes</span><span class="o">=</span><span class="n">n</span><span class="o">.</span><span class="n">all_shortest_path</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Path matrix:&quot;</span><span class="p">,</span><span class="n">matrix</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">List of nodes:&quot;</span><span class="p">,</span><span class="n">list_nodes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Path matrix: [[3, 1, 4, 5, 2], [5, 6, 3, 4, 5], [2, 3, 6, 1, 2], [2, 3, 6, 7, 1], [1, 2, 5, 6, 3]]
+List of nodes: [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;]
+</pre></div></div>
+</div>
+<p>If we want to find whether a certain trajectory is a valid path in the network, we can use method <code class="docutils literal notranslate"><span class="pre">is_path(trajectory)</span></code>. A link is a path but a node is not a path. Thus, a path has at least two nodes.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;is [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] a path?&quot;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">is_path</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;is [&#39;c&#39;, &#39;a&#39;, &#39;e&#39;] a path?&quot;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">is_path</span><span class="p">([</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;is [&#39;c&#39;, &#39;a&#39;, &#39;e&#39;, &#39;d&#39;] a path?&quot;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">is_path</span><span class="p">([</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;is [&#39;a&#39;, &#39;b&#39;] a path?&quot;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">is_path</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;is [&#39;a&#39;] a path?&quot;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">is_path</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;is [] a path?&quot;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">is_path</span><span class="p">([]))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+is [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] a path? True
+is [&#39;c&#39;, &#39;a&#39;, &#39;e&#39;] a path? True
+is [&#39;c&#39;, &#39;a&#39;, &#39;e&#39;, &#39;d&#39;] a path? False
+is [&#39;a&#39;, &#39;b&#39;] a path? True
+is [&#39;a&#39;] a path? False
+is [] a path? False
+</pre></div></div>
+</div>
+</section>
+<section id="Indicators">
+<h2>Indicators<a class="headerlink" href="#Indicators" title="Permalink to this heading"></a></h2>
+<p>Once you have your network, you can see many indicators of the network. The following indicators are all properties of the network.</p>
+<ul class="simple">
+<li><p>total_nodes</p></li>
+<li><p>total_links</p></li>
+<li><p>total_flow</p></li>
+<li><p>network_entropy</p></li>
+<li><p>average_node_entropy</p></li>
+<li><p>diameter</p></li>
+<li><p>density</p></li>
+<li><p>min_flow</p></li>
+<li><p>max_flow</p></li>
+<li><p>avg_flow</p></li>
+<li><p>stdev_flow</p></li>
+<li><p>cov_flow</p></li>
+</ul>
+<p>Let us create a new network from a capacity matrix and list of nodes. A <strong>capacity matrix</strong> is a weighted adjacency matrix.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the network (directed graph) from capacity matrix</span>
+<span class="n">C</span><span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+   <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+   <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+   <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+   <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+<span class="n">list_nodes</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">IFN</span><span class="p">(</span><span class="s2">&quot;Network Capacity&quot;</span><span class="p">)</span>
+<span class="n">n</span><span class="o">.</span><span class="n">set_matrix</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="n">list_nodes</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">n</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">layout</span><span class="o">=</span><span class="s2">&quot;Circular&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;a&#39;: {&#39;b&#39;: 2}, &#39;b&#39;: {&#39;c&#39;: 2}, &#39;c&#39;: {&#39;b&#39;: 1, &#39;d&#39;: 2}, &#39;d&#39;: {&#39;e&#39;: 1}, &#39;e&#39;: {&#39;a&#39;: 1, &#39;c&#39;: 1}}
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/BeginnerGuide_65_1.png" src="_images/BeginnerGuide_65_1.png" />
+</div>
+</div>
+<p>Now we get the network indicators</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;total nodes:&#39;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">total_nodes</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;total links:&#39;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">total_links</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;total flow:&#39;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">total_flow</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;network entropy:&#39;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">network_entropy</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;network entropy ratio:&#39;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">network_entropy_ratio</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;average node entropy:&#39;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">average_node_entropy</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;average node entropy ratio:&#39;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">average_node_entropy_ratio</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;network diameter:&#39;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">diameter</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;network density:&#39;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">density</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;min flow:&#39;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">min_flow</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;max flow:&#39;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">max_flow</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;average flow:&#39;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">average_flow</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;standard deviation of flow:&#39;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">stdev_flow</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;coefficient of variation of flow:&#39;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">cov_flow</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+total nodes: 5
+total links: 7
+total flow: 10
+network entropy: 1.3296613488547582
+network entropy ratio: 0.969570350190125
+average node entropy: 0.541117452339652
+average node entropy ratio: 1.951668662572215
+network diameter: 4
+network density: 0.7
+min flow: 1
+max flow: 2
+average flow: 1.4285714285714286
+standard deviation of flow: 0.1870439059165649
+coefficient of variation of flow: 0.13093073414159542
+</pre></div></div>
+</div>
+</section>
+<section id="Testing">
+<h2>Testing<a class="headerlink" href="#Testing" title="Permalink to this heading"></a></h2>
+<p>Once you have your network, you can test the network. The following properties are useful to test the network.</p>
+<ul class="simple">
+<li><p><strong>is_connected</strong>: there is an <em>undirected</em> path between any pair of nodes.</p></li>
+<li><p><strong>is_strongly_connected</strong>: there is a <em>directed</em> path between any pair of nodes.</p></li>
+<li><p><strong>is_premagic</strong>: sum of inflows is equal to sum of outflows in every node.</p></li>
+<li><p><strong>is_ideal_flow</strong>: strongly connected and premagic.</p></li>
+<li><p><strong>is_acyclic</strong>: contains no directed cycle.</p></li>
+<li><p><strong>is_contain_cycle</strong>: contains at least one directed cycle.</p></li>
+<li><p><strong>is_eulerian_cycle</strong>: in-degree is equal to out-degree in every node.</p></li>
+<li><p><strong>is_bipartite</strong>: if the nodes can be partitions into two subsets and each link connects the two subsets.</p></li>
+</ul>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;is_acyclic?&quot;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">is_acyclic</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;is_contain_cycle?&quot;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">is_contain_cycle</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;is_eulerian_cycle?&quot;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">is_eulerian_cycle</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;is_bipartite?&quot;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">is_bipartite</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;is_connected?&quot;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">is_connected</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;is_strongly_connected?&quot;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">is_strongly_connected</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;is_premagic?&quot;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">is_premagic</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;is_ideal_flow?&quot;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">is_ideal_flow</span><span class="p">)</span>
+<br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+is_acyclic? False
+is_contain_cycle? True
+is_eulerian_cycle? False
+is_bipartite? False
+
+is_connected? True
+is_strongly_connected? True
+is_premagic? False
+is_ideal_flow? False
+</pre></div></div>
+</div>
+</section>
+<section id="Ideal-Flow-Network">
+<h2>Ideal Flow Network<a class="headerlink" href="#Ideal-Flow-Network" title="Permalink to this heading"></a></h2>
+<p>Observe that our network above is not an ideal flow network type because even it is a strongly connected, the flow in some nodes are imbalance (no premagic).</p>
+<p>To balance the flow in each node, while keeping the total flow <span class="math notranslate nohighlight">\(\kappa\)</span>, we can compute it the three steps: 1. Convert the <em>capacity matrix</em> <span class="math notranslate nohighlight">\(\mathbf{C}\)</span> into a <em>stochastic matrix</em> <span class="math notranslate nohighlight">\(\mathbf{S}\)</span> 2. Compute the node flow <em>stationary distribution</em> <span class="math notranslate nohighlight">\(\mathbf{\pi}\)</span> of the stochastic matrix via Markov chain by preserving the total flow <span class="math notranslate nohighlight">\(\kappa\)</span>. 3. Compute the <em>ideal flow matrix</em> <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> from the <em>stochastic matrix</em> <span class="math notranslate nohighlight">\(\mathbf{S}\)</span> and the <em>stationary
+distribution</em> <span class="math notranslate nohighlight">\(\mathbf{\pi}\)</span>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kappa</span><span class="o">=</span><span class="n">n</span><span class="o">.</span><span class="n">total_flow</span>
+<span class="n">S</span><span class="o">=</span><span class="n">n</span><span class="o">.</span><span class="n">capacity_to_stochastic</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;S=&#39;</span><span class="p">,</span><span class="n">S</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">pi</span><span class="o">=</span><span class="n">n</span><span class="o">.</span><span class="n">markov</span><span class="p">(</span><span class="n">S</span><span class="p">,</span><span class="n">kappa</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;pi=&#39;</span><span class="p">,</span><span class="n">pi</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">F</span><span class="o">=</span><span class="n">n</span><span class="o">.</span><span class="n">ideal_flow</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">pi</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;F=&#39;</span><span class="p">,</span><span class="n">F</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+
+<span class="n">n</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">IFN</span><span class="p">(</span><span class="s2">&quot;Ideal Flow Network&quot;</span><span class="p">)</span>
+<span class="n">list_nodes</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]</span>
+<span class="n">n</span><span class="o">.</span><span class="n">set_matrix</span><span class="p">(</span><span class="n">F</span><span class="p">,</span><span class="n">list_nodes</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">n</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">layout</span><span class="o">=</span><span class="s2">&quot;Circular&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+S= [[0.         1.         0.         0.         0.        ]
+ [0.         0.         1.         0.         0.        ]
+ [0.         0.33333333 0.         0.66666667 0.        ]
+ [0.         0.         0.         0.         1.        ]
+ [0.5        0.         0.5        0.         0.        ]]
+
+pi= [[1.]
+ [2.]
+ [3.]
+ [2.]
+ [2.]]
+
+F= [[0. 1. 0. 0. 0.]
+ [0. 0. 2. 0. 0.]
+ [0. 1. 0. 2. 0.]
+ [0. 0. 0. 0. 2.]
+ [1. 0. 1. 0. 0.]]
+
+{&#39;a&#39;: {&#39;b&#39;: 1.0000000000000004}, &#39;b&#39;: {&#39;c&#39;: 2.0000000000000013}, &#39;c&#39;: {&#39;b&#39;: 0.9999999999999993, &#39;d&#39;: 1.9999999999999987}, &#39;d&#39;: {&#39;e&#39;: 1.9999999999999973}, &#39;e&#39;: {&#39;a&#39;: 0.9999999999999991, &#39;c&#39;: 0.9999999999999991}}
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/BeginnerGuide_71_1.png" src="_images/BeginnerGuide_71_1.png" />
+</div>
+</div>
+<p>We can test again</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;is_connected?&quot;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">is_connected</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;is_strongly_connected?&quot;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">is_strongly_connected</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;is_premagic?&quot;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">is_premagic</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;is_ideal_flow?&quot;</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">is_ideal_flow</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+is_connected? True
+is_strongly_connected? True
+is_premagic? True
+is_ideal_flow? True
+</pre></div></div>
+</div>
+<p>I hope you enjoy this tutorial!</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="overview.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tutorial.html" class="btn btn-neutral float-right" title="IFN Tutorial for General Network" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Kardi Teknomo.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

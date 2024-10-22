@@ -1,0 +1,524 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IdealFlow &mdash; Ideal Flow Network (IFN) 1.5.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=66a50015"></script>
+      <script src="_static/doctools.js?v=888ff710"></script>
+      <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data Management Methods" href="data_management.html" />
+    <link rel="prev" title="Ideal Flow Package" href="IdealFlow.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Ideal Flow Network (IFN)
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BeginnerGuide.html">Ideal Flow Network (IFN) - Beginner’s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BeginnerGuide.html#Basic-Use-of-IFN">Basic Use of IFN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">IFN Tutorial for General Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html#General-Network">General Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IFNtutorial.html">IFN Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IFN4OtherFields.html">How to Apply IFN in Your Field of Study?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_data_table.html">IFN for Classification of Data Table (Supervised Learning)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_data_table.html#Transportation-Mode-Choice">Transportation Mode Choice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_NLP.html">IFN Tutorial for Natural Language Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IFNspirituality.html">IFN Spirituality, System Thinking and Morality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_structure.html">Data Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit_tests.html">Unit Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IdealFlow.html">Ideal Flow Package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">IdealFlow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="IdealFlow.html">Ideal Flow Package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data_management.html">Data Management Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="node_management.html">Node Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="link_management.html">Link Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flow_management.html">Flow Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adjList.html">Adjacency List Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="path.html">Path and Trajectory Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="network_indices.html">Network Indices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="network_operation.html">Network Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matrix.html">Matrix Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stochastic.html">Stochastic and Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markov.html">Markov Chain Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="query_methods.html">Query and Search Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="neighborhood.html">Neighborhood</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ifn.html">Ideal Flow Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="random_walk.html">Random Walk and Random Cycle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="entropy.html">Entropy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cycle_analysis.html">Cycle Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="signature_analysis.html">Signature Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utility.html">Utilities and Helper Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_science_ai.html">Data Science, Machine Learning and Artificial Intelligence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MarkovOrder.html">Tutorial on Markov Order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transportation_analysis.html">Transportation Analysis</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Ideal Flow Network (IFN)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">IdealFlow</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/modules.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="idealflow">
+<h1>IdealFlow<a class="headerlink" href="#idealflow" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="IdealFlow.html">Ideal Flow Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="IdealFlow.html#module-IdealFlow">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IdealFlow.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IdealFlow.html#module-IdealFlow.CommandLine">IdealFlow.CommandLine module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="IdealFlow.html#IdealFlow.CommandLine.CommandLine"><code class="docutils literal notranslate"><span class="pre">CommandLine</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.CommandLine.CommandLine.ifnc"><code class="docutils literal notranslate"><span class="pre">CommandLine.ifnc</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.CommandLine.CommandLine.controller"><code class="docutils literal notranslate"><span class="pre">CommandLine.controller()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.CommandLine.CommandLine.__str_help__"><code class="docutils literal notranslate"><span class="pre">CommandLine.__str_help__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#id0"><code class="docutils literal notranslate"><span class="pre">CommandLine.controller()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="IdealFlow.html#module-IdealFlow.Network">IdealFlow.Network module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="IdealFlow.html#ideal-flow-network">Ideal Flow Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN"><code class="docutils literal notranslate"><span class="pre">IFN</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.abs_diff_capacity_flow"><code class="docutils literal notranslate"><span class="pre">IFN.abs_diff_capacity_flow()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.add_first_link"><code class="docutils literal notranslate"><span class="pre">IFN.add_first_link()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.add_last_link"><code class="docutils literal notranslate"><span class="pre">IFN.add_last_link()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.add_link"><code class="docutils literal notranslate"><span class="pre">IFN.add_link()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.add_node"><code class="docutils literal notranslate"><span class="pre">IFN.add_node()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.add_random_ones"><code class="docutils literal notranslate"><span class="pre">IFN.add_random_ones()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.adj_list_to_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.adj_list_to_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.adjacency_to_ideal_flow"><code class="docutils literal notranslate"><span class="pre">IFN.adjacency_to_ideal_flow()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.adjacency_to_stochastic"><code class="docutils literal notranslate"><span class="pre">IFN.adjacency_to_stochastic()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.all_shortest_path"><code class="docutils literal notranslate"><span class="pre">IFN.all_shortest_path()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.alphabet_list"><code class="docutils literal notranslate"><span class="pre">IFN.alphabet_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.assign"><code class="docutils literal notranslate"><span class="pre">IFN.assign()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.assign_adjacency_list"><code class="docutils literal notranslate"><span class="pre">IFN.assign_adjacency_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.assign_cycle_to_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.assign_cycle_to_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.association_predict_actor_net"><code class="docutils literal notranslate"><span class="pre">IFN.association_predict_actor_net()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.association_predict_trajectory"><code class="docutils literal notranslate"><span class="pre">IFN.association_predict_trajectory()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.association_train"><code class="docutils literal notranslate"><span class="pre">IFN.association_train()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.average_flow"><code class="docutils literal notranslate"><span class="pre">IFN.average_flow</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.average_flow_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.average_flow_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.average_node_entropy"><code class="docutils literal notranslate"><span class="pre">IFN.average_node_entropy</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.average_node_entropy_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.average_node_entropy_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.average_node_entropy_ratio"><code class="docutils literal notranslate"><span class="pre">IFN.average_node_entropy_ratio</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.average_node_entropy_ratio_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.average_node_entropy_ratio_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.backtracking"><code class="docutils literal notranslate"><span class="pre">IFN.backtracking()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.backtracking_cycle_limit"><code class="docutils literal notranslate"><span class="pre">IFN.backtracking_cycle_limit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.bfs"><code class="docutils literal notranslate"><span class="pre">IFN.bfs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.bfs_until"><code class="docutils literal notranslate"><span class="pre">IFN.bfs_until()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.binarized_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.binarized_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.canonize"><code class="docutils literal notranslate"><span class="pre">IFN.canonize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.canonize_cycle_dict"><code class="docutils literal notranslate"><span class="pre">IFN.canonize_cycle_dict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.canonize_signature"><code class="docutils literal notranslate"><span class="pre">IFN.canonize_signature()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.capacity_to_adjacency"><code class="docutils literal notranslate"><span class="pre">IFN.capacity_to_adjacency()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.capacity_to_balance_inflow_outflow"><code class="docutils literal notranslate"><span class="pre">IFN.capacity_to_balance_inflow_outflow()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.capacity_to_congestion"><code class="docutils literal notranslate"><span class="pre">IFN.capacity_to_congestion()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.capacity_to_ideal_flow"><code class="docutils literal notranslate"><span class="pre">IFN.capacity_to_ideal_flow()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.capacity_to_stochastic"><code class="docutils literal notranslate"><span class="pre">IFN.capacity_to_stochastic()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.cardinal_ifn_signature"><code class="docutils literal notranslate"><span class="pre">IFN.cardinal_ifn_signature()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.change_flow_in_cycle"><code class="docutils literal notranslate"><span class="pre">IFN.change_flow_in_cycle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.color_graph"><code class="docutils literal notranslate"><span class="pre">IFN.color_graph()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.combinations"><code class="docutils literal notranslate"><span class="pre">IFN.combinations()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.complement"><code class="docutils literal notranslate"><span class="pre">IFN.complement()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.complete_graph"><code class="docutils literal notranslate"><span class="pre">IFN.complete_graph()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.compose"><code class="docutils literal notranslate"><span class="pre">IFN.compose()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.congestion"><code class="docutils literal notranslate"><span class="pre">IFN.congestion()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.copy_dict"><code class="docutils literal notranslate"><span class="pre">IFN.copy_dict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.cov_flow"><code class="docutils literal notranslate"><span class="pre">IFN.cov_flow</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.cov_flow_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.cov_flow_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.create_node_mapping"><code class="docutils literal notranslate"><span class="pre">IFN.create_node_mapping()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.cycle_dict_to_signature"><code class="docutils literal notranslate"><span class="pre">IFN.cycle_dict_to_signature()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.cycle_length"><code class="docutils literal notranslate"><span class="pre">IFN.cycle_length()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.cycle_sum_weight"><code class="docutils literal notranslate"><span class="pre">IFN.cycle_sum_weight()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.decimal_to_fraction"><code class="docutils literal notranslate"><span class="pre">IFN.decimal_to_fraction()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.decompose"><code class="docutils literal notranslate"><span class="pre">IFN.decompose()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.delete_link"><code class="docutils literal notranslate"><span class="pre">IFN.delete_link()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.delete_node"><code class="docutils literal notranslate"><span class="pre">IFN.delete_node()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.density"><code class="docutils literal notranslate"><span class="pre">IFN.density</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.dfs"><code class="docutils literal notranslate"><span class="pre">IFN.dfs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.dfs_adj_list"><code class="docutils literal notranslate"><span class="pre">IFN.dfs_adj_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.dfs_until"><code class="docutils literal notranslate"><span class="pre">IFN.dfs_until()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.diameter"><code class="docutils literal notranslate"><span class="pre">IFN.diameter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.difference"><code class="docutils literal notranslate"><span class="pre">IFN.difference()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.duplicate"><code class="docutils literal notranslate"><span class="pre">IFN.duplicate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.equivalent_ifn"><code class="docutils literal notranslate"><span class="pre">IFN.equivalent_ifn()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.excel_col_to_num"><code class="docutils literal notranslate"><span class="pre">IFN.excel_col_to_num()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.extract_first_k_terms"><code class="docutils literal notranslate"><span class="pre">IFN.extract_first_k_terms()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.extract_last_k_terms"><code class="docutils literal notranslate"><span class="pre">IFN.extract_last_k_terms()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.find_a_cycle"><code class="docutils literal notranslate"><span class="pre">IFN.find_a_cycle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.find_all_cycles_in_adj_list"><code class="docutils literal notranslate"><span class="pre">IFN.find_all_cycles_in_adj_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.find_all_cycles_in_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.find_all_cycles_in_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.find_all_paths"><code class="docutils literal notranslate"><span class="pre">IFN.find_all_paths()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.find_all_permutation_cycles"><code class="docutils literal notranslate"><span class="pre">IFN.find_all_permutation_cycles()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.find_all_walks_in_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.find_all_walks_in_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.find_cardinal_ifn_signature_exhaustive"><code class="docutils literal notranslate"><span class="pre">IFN.find_cardinal_ifn_signature_exhaustive()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.find_cycles"><code class="docutils literal notranslate"><span class="pre">IFN.find_cycles()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.find_element_in_list"><code class="docutils literal notranslate"><span class="pre">IFN.find_element_in_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.find_key_in_dict"><code class="docutils literal notranslate"><span class="pre">IFN.find_key_in_dict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.find_path"><code class="docutils literal notranslate"><span class="pre">IFN.find_path()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.find_path_cycle_limit"><code class="docutils literal notranslate"><span class="pre">IFN.find_path_cycle_limit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.find_pivot_type"><code class="docutils literal notranslate"><span class="pre">IFN.find_pivot_type()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.find_pivots"><code class="docutils literal notranslate"><span class="pre">IFN.find_pivots()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.flow_matrix_to_adj_list"><code class="docutils literal notranslate"><span class="pre">IFN.flow_matrix_to_adj_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.flows_in_cycle"><code class="docutils literal notranslate"><span class="pre">IFN.flows_in_cycle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.form_link_cycle_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.form_link_cycle_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.from_base62"><code class="docutils literal notranslate"><span class="pre">IFN.from_base62()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.generate"><code class="docutils literal notranslate"><span class="pre">IFN.generate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.generate_combinations"><code class="docutils literal notranslate"><span class="pre">IFN.generate_combinations()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.generate_random_terms"><code class="docutils literal notranslate"><span class="pre">IFN.generate_random_terms()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.get_data"><code class="docutils literal notranslate"><span class="pre">IFN.get_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.get_link_flow"><code class="docutils literal notranslate"><span class="pre">IFN.get_link_flow()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.get_links"><code class="docutils literal notranslate"><span class="pre">IFN.get_links</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.get_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.get_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.get_path"><code class="docutils literal notranslate"><span class="pre">IFN.get_path()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.get_path_entropy"><code class="docutils literal notranslate"><span class="pre">IFN.get_path_entropy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.get_path_probability"><code class="docutils literal notranslate"><span class="pre">IFN.get_path_probability()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.global_scaling"><code class="docutils literal notranslate"><span class="pre">IFN.global_scaling()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.hadamard_division"><code class="docutils literal notranslate"><span class="pre">IFN.hadamard_division()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.has_pivot"><code class="docutils literal notranslate"><span class="pre">IFN.has_pivot()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.ideal_flow"><code class="docutils literal notranslate"><span class="pre">IFN.ideal_flow()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.ideal_flow_to_stochastic"><code class="docutils literal notranslate"><span class="pre">IFN.ideal_flow_to_stochastic()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.identify_unique_nodes"><code class="docutils literal notranslate"><span class="pre">IFN.identify_unique_nodes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.in_degree"><code class="docutils literal notranslate"><span class="pre">IFN.in_degree</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.in_neighbors"><code class="docutils literal notranslate"><span class="pre">IFN.in_neighbors()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.in_weight"><code class="docutils literal notranslate"><span class="pre">IFN.in_weight</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.intersect"><code class="docutils literal notranslate"><span class="pre">IFN.intersect()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.inverse_dict"><code class="docutils literal notranslate"><span class="pre">IFN.inverse_dict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_acyclic"><code class="docutils literal notranslate"><span class="pre">IFN.is_acyclic</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_bipartite"><code class="docutils literal notranslate"><span class="pre">IFN.is_bipartite</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_connected"><code class="docutils literal notranslate"><span class="pre">IFN.is_connected</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_contain_cycle"><code class="docutils literal notranslate"><span class="pre">IFN.is_contain_cycle</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_cycle_canonical"><code class="docutils literal notranslate"><span class="pre">IFN.is_cycle_canonical()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_cycle_has_coef_1"><code class="docutils literal notranslate"><span class="pre">IFN.is_cycle_has_coef_1()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_edge_in_cycle"><code class="docutils literal notranslate"><span class="pre">IFN.is_edge_in_cycle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_equal_network"><code class="docutils literal notranslate"><span class="pre">IFN.is_equal_network()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_equal_signature"><code class="docutils literal notranslate"><span class="pre">IFN.is_equal_signature()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_equivalent_ifn"><code class="docutils literal notranslate"><span class="pre">IFN.is_equivalent_ifn()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_eulerian_cycle"><code class="docutils literal notranslate"><span class="pre">IFN.is_eulerian_cycle</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_ideal_flow"><code class="docutils literal notranslate"><span class="pre">IFN.is_ideal_flow</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_ideal_flow_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.is_ideal_flow_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_irreducible_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.is_irreducible_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_irreducible_signature"><code class="docutils literal notranslate"><span class="pre">IFN.is_irreducible_signature()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_non_empty_adj_list"><code class="docutils literal notranslate"><span class="pre">IFN.is_non_empty_adj_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_non_negative_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.is_non_negative_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_path"><code class="docutils literal notranslate"><span class="pre">IFN.is_path()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_positive_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.is_positive_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_premagic"><code class="docutils literal notranslate"><span class="pre">IFN.is_premagic</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_premagic_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.is_premagic_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_premier_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.is_premier_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_premier_signature"><code class="docutils literal notranslate"><span class="pre">IFN.is_premier_signature()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_reachable"><code class="docutils literal notranslate"><span class="pre">IFN.is_reachable()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_row_stochastic_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.is_row_stochastic_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_square_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.is_square_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_strongly_connected"><code class="docutils literal notranslate"><span class="pre">IFN.is_strongly_connected</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_trajectory_cycle"><code class="docutils literal notranslate"><span class="pre">IFN.is_trajectory_cycle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.is_valid_signature"><code class="docutils literal notranslate"><span class="pre">IFN.is_valid_signature()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.kappa"><code class="docutils literal notranslate"><span class="pre">IFN.kappa()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.link_combination"><code class="docutils literal notranslate"><span class="pre">IFN.link_combination()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.link_cycle_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.link_cycle_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.link_permutation"><code class="docutils literal notranslate"><span class="pre">IFN.link_permutation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.load"><code class="docutils literal notranslate"><span class="pre">IFN.load()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.load_adj_list"><code class="docutils literal notranslate"><span class="pre">IFN.load_adj_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.markov"><code class="docutils literal notranslate"><span class="pre">IFN.markov()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.match"><code class="docutils literal notranslate"><span class="pre">IFN.match()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.matrix_apply_cycle"><code class="docutils literal notranslate"><span class="pre">IFN.matrix_apply_cycle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.matrix_replace_value"><code class="docutils literal notranslate"><span class="pre">IFN.matrix_replace_value()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.matrix_to_adj_list"><code class="docutils literal notranslate"><span class="pre">IFN.matrix_to_adj_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.max_flow"><code class="docutils literal notranslate"><span class="pre">IFN.max_flow</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.max_flow_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.max_flow_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.max_flow_path"><code class="docutils literal notranslate"><span class="pre">IFN.max_flow_path()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.max_network_entropy"><code class="docutils literal notranslate"><span class="pre">IFN.max_network_entropy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.merge_adjacency_list"><code class="docutils literal notranslate"><span class="pre">IFN.merge_adjacency_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.merge_signatures"><code class="docutils literal notranslate"><span class="pre">IFN.merge_signatures()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.min_flow"><code class="docutils literal notranslate"><span class="pre">IFN.min_flow</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.min_flow_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.min_flow_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.min_flow_path"><code class="docutils literal notranslate"><span class="pre">IFN.min_flow_path()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.min_irreducible"><code class="docutils literal notranslate"><span class="pre">IFN.min_irreducible()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.network_delete_cloud"><code class="docutils literal notranslate"><span class="pre">IFN.network_delete_cloud()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.network_entropy"><code class="docutils literal notranslate"><span class="pre">IFN.network_entropy</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.network_entropy_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.network_entropy_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.network_entropy_ratio"><code class="docutils literal notranslate"><span class="pre">IFN.network_entropy_ratio</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.network_entropy_ratio_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.network_entropy_ratio_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.network_probability"><code class="docutils literal notranslate"><span class="pre">IFN.network_probability</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.node_index"><code class="docutils literal notranslate"><span class="pre">IFN.node_index()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.node_name"><code class="docutils literal notranslate"><span class="pre">IFN.node_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.nodes"><code class="docutils literal notranslate"><span class="pre">IFN.nodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.nodes_flow"><code class="docutils literal notranslate"><span class="pre">IFN.nodes_flow</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.num_to_excel_col"><code class="docutils literal notranslate"><span class="pre">IFN.num_to_excel_col()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.num_to_str_fraction"><code class="docutils literal notranslate"><span class="pre">IFN.num_to_str_fraction()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.order_markov_higher"><code class="docutils literal notranslate"><span class="pre">IFN.order_markov_higher()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.order_markov_lower"><code class="docutils literal notranslate"><span class="pre">IFN.order_markov_lower()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.out_degree"><code class="docutils literal notranslate"><span class="pre">IFN.out_degree</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.out_neighbors"><code class="docutils literal notranslate"><span class="pre">IFN.out_neighbors()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.out_weight"><code class="docutils literal notranslate"><span class="pre">IFN.out_weight</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.overlay"><code class="docutils literal notranslate"><span class="pre">IFN.overlay()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.parse_cycle"><code class="docutils literal notranslate"><span class="pre">IFN.parse_cycle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.parse_terms_to_dict"><code class="docutils literal notranslate"><span class="pre">IFN.parse_terms_to_dict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.path_distance"><code class="docutils literal notranslate"><span class="pre">IFN.path_distance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.path_length"><code class="docutils literal notranslate"><span class="pre">IFN.path_length()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.path_sum_weight"><code class="docutils literal notranslate"><span class="pre">IFN.path_sum_weight()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.permutations"><code class="docutils literal notranslate"><span class="pre">IFN.permutations()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.premier_ifn"><code class="docutils literal notranslate"><span class="pre">IFN.premier_ifn()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.premier_signature"><code class="docutils literal notranslate"><span class="pre">IFN.premier_signature()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.query"><code class="docutils literal notranslate"><span class="pre">IFN.query()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.query_cycle_limit"><code class="docutils literal notranslate"><span class="pre">IFN.query_cycle_limit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.rand_capacity"><code class="docutils literal notranslate"><span class="pre">IFN.rand_capacity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.rand_ifn_signature"><code class="docutils literal notranslate"><span class="pre">IFN.rand_ifn_signature()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.rand_int"><code class="docutils literal notranslate"><span class="pre">IFN.rand_int()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.rand_irreducible"><code class="docutils literal notranslate"><span class="pre">IFN.rand_irreducible()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.rand_permutation_eye"><code class="docutils literal notranslate"><span class="pre">IFN.rand_permutation_eye()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.rand_stochastic"><code class="docutils literal notranslate"><span class="pre">IFN.rand_stochastic()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.random_cycle_from"><code class="docutils literal notranslate"><span class="pre">IFN.random_cycle_from()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.random_ideal_flow_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.random_ideal_flow_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.random_ifn"><code class="docutils literal notranslate"><span class="pre">IFN.random_ifn()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.random_irreducible_stochastic"><code class="docutils literal notranslate"><span class="pre">IFN.random_irreducible_stochastic()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.random_walk_cycle"><code class="docutils literal notranslate"><span class="pre">IFN.random_walk_cycle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.random_walk_from"><code class="docutils literal notranslate"><span class="pre">IFN.random_walk_from()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.random_walk_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.random_walk_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.random_walk_nodes"><code class="docutils literal notranslate"><span class="pre">IFN.random_walk_nodes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.read_csv"><code class="docutils literal notranslate"><span class="pre">IFN.read_csv()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.reduce_link_flow"><code class="docutils literal notranslate"><span class="pre">IFN.reduce_link_flow()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.reindex"><code class="docutils literal notranslate"><span class="pre">IFN.reindex()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.relabel_signature"><code class="docutils literal notranslate"><span class="pre">IFN.relabel_signature()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.reverse_network"><code class="docutils literal notranslate"><span class="pre">IFN.reverse_network()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.reverse_relabel_signature"><code class="docutils literal notranslate"><span class="pre">IFN.reverse_relabel_signature()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.row_stochastic"><code class="docutils literal notranslate"><span class="pre">IFN.row_stochastic</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.save"><code class="docutils literal notranslate"><span class="pre">IFN.save()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.save_adj_list"><code class="docutils literal notranslate"><span class="pre">IFN.save_adj_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.set_data"><code class="docutils literal notranslate"><span class="pre">IFN.set_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.set_link_weight"><code class="docutils literal notranslate"><span class="pre">IFN.set_link_weight()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.set_link_weight_plus_1"><code class="docutils literal notranslate"><span class="pre">IFN.set_link_weight_plus_1()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.set_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.set_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.set_path"><code class="docutils literal notranslate"><span class="pre">IFN.set_path()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.shortest_path"><code class="docutils literal notranslate"><span class="pre">IFN.shortest_path()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.show"><code class="docutils literal notranslate"><span class="pre">IFN.show()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.signature_coef_to_1"><code class="docutils literal notranslate"><span class="pre">IFN.signature_coef_to_1()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.signature_to_adj_list"><code class="docutils literal notranslate"><span class="pre">IFN.signature_to_adj_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.signature_to_coef_flow"><code class="docutils literal notranslate"><span class="pre">IFN.signature_to_coef_flow()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.signature_to_column_stochastic"><code class="docutils literal notranslate"><span class="pre">IFN.signature_to_column_stochastic()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.signature_to_ideal_flow"><code class="docutils literal notranslate"><span class="pre">IFN.signature_to_ideal_flow()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.signature_to_kappa"><code class="docutils literal notranslate"><span class="pre">IFN.signature_to_kappa()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.signature_to_link_flow"><code class="docutils literal notranslate"><span class="pre">IFN.signature_to_link_flow()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.signature_to_links"><code class="docutils literal notranslate"><span class="pre">IFN.signature_to_links()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.signature_to_max_flow"><code class="docutils literal notranslate"><span class="pre">IFN.signature_to_max_flow()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.signature_to_min_flow"><code class="docutils literal notranslate"><span class="pre">IFN.signature_to_min_flow()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.signature_to_num_links"><code class="docutils literal notranslate"><span class="pre">IFN.signature_to_num_links()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.signature_to_num_nodes"><code class="docutils literal notranslate"><span class="pre">IFN.signature_to_num_nodes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.signature_to_pivots"><code class="docutils literal notranslate"><span class="pre">IFN.signature_to_pivots()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.signature_to_row_stochastic"><code class="docutils literal notranslate"><span class="pre">IFN.signature_to_row_stochastic()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.signature_to_sum_cols"><code class="docutils literal notranslate"><span class="pre">IFN.signature_to_sum_cols()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.signature_to_sum_rows"><code class="docutils literal notranslate"><span class="pre">IFN.signature_to_sum_rows()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.solve_cycles"><code class="docutils literal notranslate"><span class="pre">IFN.solve_cycles()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.stationary_markov_chain"><code class="docutils literal notranslate"><span class="pre">IFN.stationary_markov_chain()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.stdev_flow"><code class="docutils literal notranslate"><span class="pre">IFN.stdev_flow</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.stdev_flow_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.stdev_flow_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.stochastic_to_entropy_ratio"><code class="docutils literal notranslate"><span class="pre">IFN.stochastic_to_entropy_ratio()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.stochastic_to_ideal_flow"><code class="docutils literal notranslate"><span class="pre">IFN.stochastic_to_ideal_flow()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.stochastic_to_network_entropy"><code class="docutils literal notranslate"><span class="pre">IFN.stochastic_to_network_entropy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.stochastic_to_pi"><code class="docutils literal notranslate"><span class="pre">IFN.stochastic_to_pi()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.stochastic_to_probability"><code class="docutils literal notranslate"><span class="pre">IFN.stochastic_to_probability()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.str_to_num"><code class="docutils literal notranslate"><span class="pre">IFN.str_to_num()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.string_to_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.string_to_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.sum_dict_values"><code class="docutils literal notranslate"><span class="pre">IFN.sum_dict_values()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.sum_of_col"><code class="docutils literal notranslate"><span class="pre">IFN.sum_of_col()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.sum_of_row"><code class="docutils literal notranslate"><span class="pre">IFN.sum_of_row()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.to_adjacency_matrix"><code class="docutils literal notranslate"><span class="pre">IFN.to_adjacency_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.to_base62"><code class="docutils literal notranslate"><span class="pre">IFN.to_base62()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.to_equal_inflow"><code class="docutils literal notranslate"><span class="pre">IFN.to_equal_inflow()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.to_equal_outflow"><code class="docutils literal notranslate"><span class="pre">IFN.to_equal_outflow()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.to_graph"><code class="docutils literal notranslate"><span class="pre">IFN.to_graph()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.to_markov_order"><code class="docutils literal notranslate"><span class="pre">IFN.to_markov_order()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.total_flow"><code class="docutils literal notranslate"><span class="pre">IFN.total_flow</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.total_links"><code class="docutils literal notranslate"><span class="pre">IFN.total_links</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.total_nodes"><code class="docutils literal notranslate"><span class="pre">IFN.total_nodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.trajectory_to_links"><code class="docutils literal notranslate"><span class="pre">IFN.trajectory_to_links()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.union"><code class="docutils literal notranslate"><span class="pre">IFN.union()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.universe"><code class="docutils literal notranslate"><span class="pre">IFN.universe()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.unlearn"><code class="docutils literal notranslate"><span class="pre">IFN.unlearn()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Network.IFN.weighted_random_choice"><code class="docutils literal notranslate"><span class="pre">IFN.weighted_random_choice()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="IdealFlow.html#module-IdealFlow.Classifier">IdealFlow.Classifier module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="IdealFlow.html#IdealFlow.Classifier.Classifier"><code class="docutils literal notranslate"><span class="pre">Classifier</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Classifier.Classifier.fit"><code class="docutils literal notranslate"><span class="pre">Classifier.fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Classifier.Classifier.generate"><code class="docutils literal notranslate"><span class="pre">Classifier.generate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Classifier.Classifier.load"><code class="docutils literal notranslate"><span class="pre">Classifier.load()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Classifier.Classifier.predict"><code class="docutils literal notranslate"><span class="pre">Classifier.predict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Classifier.Classifier.predict_table"><code class="docutils literal notranslate"><span class="pre">Classifier.predict_table()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Classifier.Classifier.save"><code class="docutils literal notranslate"><span class="pre">Classifier.save()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Classifier.Classifier.show"><code class="docutils literal notranslate"><span class="pre">Classifier.show()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Classifier.Classifier.top_nodes"><code class="docutils literal notranslate"><span class="pre">Classifier.top_nodes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Classifier.Classifier.train"><code class="docutils literal notranslate"><span class="pre">Classifier.train()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Classifier.Classifier.trajCode2VarVal"><code class="docutils literal notranslate"><span class="pre">Classifier.trajCode2VarVal()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Classifier.Classifier.trajVarVal2Code"><code class="docutils literal notranslate"><span class="pre">Classifier.trajVarVal2Code()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Classifier.Classifier.update_lut"><code class="docutils literal notranslate"><span class="pre">Classifier.update_lut()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="IdealFlow.html#module-IdealFlow.Table">IdealFlow.Table module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="IdealFlow.html#IdealFlow.Table.Table_Classifier"><code class="docutils literal notranslate"><span class="pre">Table_Classifier</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Table.Table_Classifier.markovOrder"><code class="docutils literal notranslate"><span class="pre">Table_Classifier.markovOrder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Table.Table_Classifier.version"><code class="docutils literal notranslate"><span class="pre">Table_Classifier.version</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Table.Table_Classifier.variables"><code class="docutils literal notranslate"><span class="pre">Table_Classifier.variables</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Table.Table_Classifier.prepare_data_table"><code class="docutils literal notranslate"><span class="pre">Table_Classifier.prepare_data_table()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Table.Table_Classifier.__take_a_column__"><code class="docutils literal notranslate"><span class="pre">Table_Classifier.__take_a_column__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Table.Table_Classifier.__takeARow__"><code class="docutils literal notranslate"><span class="pre">Table_Classifier.__takeARow__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Table.Table_Classifier.__delete_a_row__"><code class="docutils literal notranslate"><span class="pre">Table_Classifier.__delete_a_row__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Table.Table_Classifier.__convert__table_to_code__"><code class="docutils literal notranslate"><span class="pre">Table_Classifier.__convert__table_to_code__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Table.Table_Classifier.__delete_a_column__"><code class="docutils literal notranslate"><span class="pre">Table_Classifier.__delete_a_column__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#id28"><code class="docutils literal notranslate"><span class="pre">Table_Classifier.prepare_data_table()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="IdealFlow.html#module-IdealFlow.Text">IdealFlow.Text module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP"><code class="docutils literal notranslate"><span class="pre">NLP</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.set_text"><code class="docutils literal notranslate"><span class="pre">NLP.set_text()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.get_text"><code class="docutils literal notranslate"><span class="pre">NLP.get_text()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.load_text"><code class="docutils literal notranslate"><span class="pre">NLP.load_text()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.prepareTextInput"><code class="docutils literal notranslate"><span class="pre">NLP.prepareTextInput()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.query"><code class="docutils literal notranslate"><span class="pre">NLP.query()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.word_frequencies"><code class="docutils literal notranslate"><span class="pre">NLP.word_frequencies()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.average_sentence_length"><code class="docutils literal notranslate"><span class="pre">NLP.average_sentence_length()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.average_word_length"><code class="docutils literal notranslate"><span class="pre">NLP.average_word_length()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.unique_words_size"><code class="docutils literal notranslate"><span class="pre">NLP.unique_words_size()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.add_entity_pattern"><code class="docutils literal notranslate"><span class="pre">NLP.add_entity_pattern()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.add_intent"><code class="docutils literal notranslate"><span class="pre">NLP.add_intent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#id29"><code class="docutils literal notranslate"><span class="pre">NLP.average_sentence_length()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#id30"><code class="docutils literal notranslate"><span class="pre">NLP.average_word_length()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.bag_of_words"><code class="docutils literal notranslate"><span class="pre">NLP.bag_of_words()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.build_dependency_tree"><code class="docutils literal notranslate"><span class="pre">NLP.build_dependency_tree()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.detokenize"><code class="docutils literal notranslate"><span class="pre">NLP.detokenize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.entity_recognition"><code class="docutils literal notranslate"><span class="pre">NLP.entity_recognition()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.evaluate"><code class="docutils literal notranslate"><span class="pre">NLP.evaluate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.get_paragraphs"><code class="docutils literal notranslate"><span class="pre">NLP.get_paragraphs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.get_sentences"><code class="docutils literal notranslate"><span class="pre">NLP.get_sentences()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#id31"><code class="docutils literal notranslate"><span class="pre">NLP.get_text</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.intent_recognition"><code class="docutils literal notranslate"><span class="pre">NLP.intent_recognition()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.lemmatize"><code class="docutils literal notranslate"><span class="pre">NLP.lemmatize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.load_model"><code class="docutils literal notranslate"><span class="pre">NLP.load_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.load_patterns"><code class="docutils literal notranslate"><span class="pre">NLP.load_patterns()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#id32"><code class="docutils literal notranslate"><span class="pre">NLP.load_text()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.ngrams"><code class="docutils literal notranslate"><span class="pre">NLP.ngrams()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.normalize_text"><code class="docutils literal notranslate"><span class="pre">NLP.normalize_text()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.parse_sentence"><code class="docutils literal notranslate"><span class="pre">NLP.parse_sentence()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.plot_word_frequencies"><code class="docutils literal notranslate"><span class="pre">NLP.plot_word_frequencies()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.predict_text_category"><code class="docutils literal notranslate"><span class="pre">NLP.predict_text_category()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#id33"><code class="docutils literal notranslate"><span class="pre">NLP.prepareTextInput()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#id34"><code class="docutils literal notranslate"><span class="pre">NLP.query()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.recognize"><code class="docutils literal notranslate"><span class="pre">NLP.recognize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.remove_stopwords"><code class="docutils literal notranslate"><span class="pre">NLP.remove_stopwords()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.save_entity"><code class="docutils literal notranslate"><span class="pre">NLP.save_entity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.save_intent"><code class="docutils literal notranslate"><span class="pre">NLP.save_intent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.save_model"><code class="docutils literal notranslate"><span class="pre">NLP.save_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.sentence_to_tokens"><code class="docutils literal notranslate"><span class="pre">NLP.sentence_to_tokens()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.sentences_to_text"><code class="docutils literal notranslate"><span class="pre">NLP.sentences_to_text()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#id35"><code class="docutils literal notranslate"><span class="pre">NLP.set_text</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.simple_pos_tagging"><code class="docutils literal notranslate"><span class="pre">NLP.simple_pos_tagging()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.summarize"><code class="docutils literal notranslate"><span class="pre">NLP.summarize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.text_to_paragraphs"><code class="docutils literal notranslate"><span class="pre">NLP.text_to_paragraphs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.text_to_sentences"><code class="docutils literal notranslate"><span class="pre">NLP.text_to_sentences()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.tokenize"><code class="docutils literal notranslate"><span class="pre">NLP.tokenize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.training_data_size"><code class="docutils literal notranslate"><span class="pre">NLP.training_data_size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#id36"><code class="docutils literal notranslate"><span class="pre">NLP.unique_words_size()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.update_model"><code class="docutils literal notranslate"><span class="pre">NLP.update_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.vectorize"><code class="docutils literal notranslate"><span class="pre">NLP.vectorize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#IdealFlow.Text.NLP.vocabulary_size"><code class="docutils literal notranslate"><span class="pre">NLP.vocabulary_size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="IdealFlow.html#id37"><code class="docutils literal notranslate"><span class="pre">NLP.word_frequencies()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="IdealFlow.html" class="btn btn-neutral float-left" title="Ideal Flow Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="data_management.html" class="btn btn-neutral float-right" title="Data Management Methods" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Kardi Teknomo.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
