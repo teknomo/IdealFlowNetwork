@@ -1,0 +1,216 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overview &mdash; Ideal Flow Network (IFN) 1.5.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=44dfd65d"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data Structure" href="data_structure.html" />
+    <link rel="prev" title="Welcome to Ideal Flow Network (IFN)’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Ideal Flow Network (IFN)
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#main-classes">Main Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-usage">Example Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#categories">Categories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#applications-layer">Applications Layer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data_structure.html">Data Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit_tests.html">Unit Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IdealFlow.html">Ideal Flow Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">IdealFlow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_management.html">Data Management Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="node_management.html">Node Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="link_management.html">Link Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flow_management.html">Flow Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adjList.html">Adjacency List Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="path.html">Path and Trajectory Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="network_indices.html">Network Indices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="network_operation.html">Network Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matrix.html">Matrix Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stochastic.html">Stochastic and Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markov.html">Markov Chain Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="query_methods.html">Query and Search Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="neighborhood.html">Neighborhood</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ifn.html">Ideal Flow Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="random_walk.html">Random Walk and Random Cycle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="entropy.html">Entropy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cycle_analysis.html">Cycle Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="signature_analysis.html">Signature Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utility.html">Utilities and Helper Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_science_ai.html">Data Science, Machine Learning and Artificial Intelligence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transportation_analysis.html">Transportation Analysis</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Ideal Flow Network (IFN)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Overview</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/overview.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h1>
+<p>The <cite>IdealFlow</cite> module provides tools for creating and managing Ideal Flow Networks (IFN).
+It includes functionalities for managing data, manipulating network structures, and
+querying network information. This module is designed to be flexible and scalable for
+various network analysis applications.</p>
+<section id="main-classes">
+<h2>Main Classes<a class="headerlink" href="#main-classes" title="Link to this heading"></a></h2>
+<p>The <cite>IdealFlow</cite> module includes the following primary class:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>IFN</strong>: The main class representing an Ideal Flow Network, which provides various methods for analyzing and manipulating nodes, links, adjacency lists, matrices,</dt><dd><p>and performing network analysis and metric, including path finding, cycles analysis, analyzing connectivity, signature, and more.
+This class is designed to handle flow networks and their properties through mathematical operations and context.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="example-usage">
+<h2>Example Usage<a class="headerlink" href="#example-usage" title="Link to this heading"></a></h2>
+<p>Here is a basic example of how to use the <cite>IdealFlow</cite> module:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IdealFlow.Network</span> <span class="kn">import</span> <span class="n">IFN</span>
+
+<span class="c1"># Create a new Ideal Flow Network instance</span>
+<span class="n">network</span> <span class="o">=</span> <span class="n">IFN</span><span class="p">()</span>
+
+<span class="c1"># Set up the adjacency list</span>
+<span class="n">adj_list</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">],</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">],</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]}</span>
+<span class="n">network</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">adj_list</span><span class="p">)</span>
+
+<span class="c1"># Add a link between nodes &#39;a&#39; and &#39;b&#39;</span>
+<span class="n">network</span><span class="o">.</span><span class="n">add_link</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># Query the neighbors of node &#39;a&#39;</span>
+<span class="n">neighbors</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">get_neighbors</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Neighbors of &#39;a&#39;:&quot;</span><span class="p">,</span> <span class="n">neighbors</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The above example demonstrates how to create a network, add links, and retrieve network information.</p>
+</section>
+<section id="categories">
+<h2>Categories<a class="headerlink" href="#categories" title="Link to this heading"></a></h2>
+<p>For more detailed information, see the following sections:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="index.html">Documentation Index</a></p></li>
+<li><p><a class="reference external" href="overview.html">Overview</a></p></li>
+<li><p><a class="reference external" href="BeginnerGuide.html">Beginner’s Guide</a></p></li>
+<li><p><a class="reference external" href="tutorial.html">Tutorial</a></p></li>
+<li><p><a class="reference external" href="modules.html">API Reference</a></p></li>
+<li><p><a class="reference external" href="node_management.html">Node Management</a></p></li>
+<li><p><a class="reference external" href="link_management.html">Link Management</a></p></li>
+<li><p><a class="reference external" href="flow_management.html">Flow_management</a></p></li>
+<li><p><a class="reference external" href="adjList.html">Adjacency List</a></p></li>
+<li><p><a class="reference external" href="path.html">Path Analysis</a></p></li>
+<li><p><a class="reference external" href="network_indices.html">Network Indices</a></p></li>
+<li><p><a class="reference external" href="network_operation.html">Network Operation Methods</a></p></li>
+<li><p><a class="reference external" href="matrix.html">Matrix</a></p></li>
+<li><p><a class="reference external" href="stochastic.html">Stochastic</a></p></li>
+<li><p><a class="reference external" href="markov.html">Markov Chain</a></p></li>
+<li><p><a class="reference external" href="query_methods.html">Query Methods</a></p></li>
+<li><p><a class="reference external" href="neighborhood.html">Neighborhood</a></p></li>
+<li><p><a class="reference external" href="ifn.html">Ideal Flow Analysis</a></p></li>
+<li><p><a class="reference external" href="random_walk.html">Random Walk</a></p></li>
+<li><p><a class="reference external" href="entropy.html">Entropy</a></p></li>
+<li><p><a class="reference external" href="cycle_analysis.html">Cycle Analysis</a></p></li>
+<li><p><a class="reference external" href="signature_analysis.html">Signature Analysis</a></p></li>
+<li><p><a class="reference external" href="utility.html">Utility</a></p></li>
+<li><p><a class="reference external" href="MarkovOrder.html">Markov Order</a></p></li>
+<li><p><a class="reference external" href="data_management.html">Data Management Methods</a></p></li>
+</ul>
+</section>
+<section id="applications-layer">
+<h2>Applications Layer<a class="headerlink" href="#applications-layer" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="data_science_ai.html">Data Science, Artificial Intelligence, Machine Learning</a></p></li>
+<li><p><a class="reference external" href="transportation_analysis.html">Transportation Analysis</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Ideal Flow Network (IFN)’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="data_structure.html" class="btn btn-neutral float-right" title="Data Structure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Kardi Teknomo.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

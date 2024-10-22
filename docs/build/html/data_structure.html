@@ -1,0 +1,261 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Structure &mdash; Ideal Flow Network (IFN) 1.5.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=44dfd65d"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Unit Tests" href="unit_tests.html" />
+    <link rel="prev" title="Overview" href="overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Ideal Flow Network (IFN)
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#network-directed-graph">1. Network Directed Graph</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">}</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">}</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">}</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#matrix-representation">2. Matrix Representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#naming-conventions">Naming Conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coding-standards">Coding Standards</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="unit_tests.html">Unit Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IdealFlow.html">Ideal Flow Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">IdealFlow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_management.html">Data Management Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="node_management.html">Node Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="link_management.html">Link Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flow_management.html">Flow Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adjList.html">Adjacency List Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="path.html">Path and Trajectory Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="network_indices.html">Network Indices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="network_operation.html">Network Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matrix.html">Matrix Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stochastic.html">Stochastic and Probability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markov.html">Markov Chain Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="query_methods.html">Query and Search Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="neighborhood.html">Neighborhood</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ifn.html">Ideal Flow Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="random_walk.html">Random Walk and Random Cycle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="entropy.html">Entropy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cycle_analysis.html">Cycle Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="signature_analysis.html">Signature Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utility.html">Utilities and Helper Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_science_ai.html">Data Science, Machine Learning and Artificial Intelligence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transportation_analysis.html">Transportation Analysis</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Ideal Flow Network (IFN)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Data Structure</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/data_structure.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-structure">
+<h1>Data Structure<a class="headerlink" href="#data-structure" title="Link to this heading"></a></h1>
+<p>The structure of the IFN package is organized around two main components: <strong>network directed graphs</strong> and <strong>matrices</strong>. The dependencies between the packages are illustrated in the figure [here](packages_dependencies.jpg), and the class inheritance is shown in the figure [here](class_inheritances.jpg).</p>
+<p>The IFN (Ideal Flow Network) package represents data using two primary formats: <strong>Network Directed Graphs</strong> and <strong>Matrices</strong>. These representations allow for flexible modeling of relationships between nodes and links in a network.</p>
+<section id="network-directed-graph">
+<h2>1. Network Directed Graph<a class="headerlink" href="#network-directed-graph" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>A <strong>network</strong> is represented as an <strong>adjacency list</strong>, which is a nested Python dictionary.</p></li>
+<li><p>A <strong>node</strong> is a key in the adjacency list, and each node is represented by its name (a string).</p></li>
+<li><p><strong>Links</strong> between nodes are always directed, meaning they have a starting point and an endpoint. In the adjacency list:
+* The <strong>starting node</strong> is the key at the first level.
+* The <strong>ending node</strong> is the key at the second level.</p></li>
+<li><p>The <strong>weight</strong> of a link is stored as the value in the second level of the adjacency list. The weight can be an integer or a float (such as a probability).</p></li>
+</ul>
+<p><strong>Example of a Directed Graph:</strong></p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>python
+{</p>
+<blockquote>
+<div><p>‘a’: {‘b’: 3, ‘c’: 1, ‘d’: 77},
+‘b’: {‘c’: 1, ‘e’: 1},
+‘c’: {‘e’: 1},
+‘d’: {‘c’: 1},
+‘e’: {‘a’: 1, ‘f’: 5}</p>
+</div></blockquote>
+<section id="id5">
+<h3>}<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<p>Another example using probabilities:</p>
+<p><a href="#id6"><span class="problematic" id="id7">``</span></a><a href="#id8"><span class="problematic" id="id9">`</span></a>python
+{</p>
+<blockquote>
+<div><p>‘a’: {‘b’: 0.012, ‘c’: 0.012, ‘d’: 0.916},
+‘b’: {‘c’: 0.012, ‘e’: 0.012},
+‘c’: {‘e’: 0.012},
+‘d’: {‘c’: 0.012},
+‘e’: {‘a’: 0.012}</p>
+</div></blockquote>
+</section>
+<section id="id10">
+<h3>}<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
+<p>A real-world example using city names:</p>
+<p><a href="#id11"><span class="problematic" id="id12">``</span></a><a href="#id13"><span class="problematic" id="id14">`</span></a>python
+{</p>
+<blockquote>
+<div><p>‘Calgary’: {},
+‘Chicago’: {‘Denver’: 1000},
+‘Denver’: {‘Houston’: 1500, ‘Los Angeles’: 1000, ‘Urbana’: 1000},
+‘Houston’: {‘Los Angeles’: 1500},
+‘Los Angeles’: {},
+‘New York’: {‘Chicago’: 1000, ‘Denver’: 1900, ‘Toronto’: 800},
+‘Toronto’: {‘Calgary’: 1500, ‘Chicago’: 500, ‘Los Angeles’: 1800},
+‘Urbana’: {}</p>
+</div></blockquote>
+</section>
+<section id="id15">
+<h3>}<a class="headerlink" href="#id15" title="Link to this heading"></a></h3>
+</section>
+</section>
+<section id="matrix-representation">
+<h2>2. Matrix Representation<a class="headerlink" href="#matrix-representation" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>The <strong>weighted adjacency matrix</strong> is a two-dimensional array (a Python list of lists) that represents connections between nodes. Each element in the matrix represents the weight of the connection between nodes.</p></li>
+<li><p>The matrix is accompanied by a <strong>list of nodes</strong>, which represents the names of the nodes corresponding to the matrix rows and columns.</p></li>
+</ul>
+<p><strong>Example of a Weighted Adjacency Matrix:</strong></p>
+<p><a href="#id16"><span class="problematic" id="id17">``</span></a><a href="#id18"><span class="problematic" id="id19">`</span></a>python
+matrix = [</p>
+<blockquote>
+<div><p>[0, 1, 1, 77, 0],
+[0, 0, 1, 0, 1],
+[0, 0, 0, 0, 1],
+[0, 0, 1, 0, 0],
+[1, 0, 0, 0, 0]</p>
+</div></blockquote>
+<p>]
+nodes = [‘a’, ‘b’, ‘c’, ‘d’, ‘e’]
+<a href="#id20"><span class="problematic" id="id21">``</span></a><a href="#id22"><span class="problematic" id="id23">`</span></a></p>
+<p>There are functions to convert between adjacency lists and matrices:
+* To convert a matrix to an adjacency list, use the function <code class="xref py py-meth docutils literal notranslate"><span class="pre">matrix_to_adj_list()</span></code>.
+* To convert an adjacency list to a matrix, use the function <code class="xref py py-meth docutils literal notranslate"><span class="pre">adj_list_to_matrix()</span></code>.</p>
+<p>A <strong>path</strong> (or trajectory) through the network is represented as a sequence of node names (a Python list of strings).</p>
+<p><strong>Example of a Path:</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">['a',</span> <span class="pre">'b',</span> <span class="pre">'e']</span>
+<span class="pre">`</span></code></p>
+</section>
+<section id="naming-conventions">
+<h2>Naming Conventions<a class="headerlink" href="#naming-conventions" title="Link to this heading"></a></h2>
+<p>We follow specific naming conventions in the IFN package to maintain consistency and readability:</p>
+<ul class="simple">
+<li><p>Each IFN has a <strong>name</strong> to represent the class.</p></li>
+<li><p>When saving an IFN, the <strong>filename</strong> is the same as the name of the IFN.</p></li>
+<li><p><strong>Private functions</strong> start and end with double underscores (<cite>__function_name__</cite>).</p></li>
+<li><p><strong>Class names</strong> start with a capital letter.</p></li>
+<li><p><strong>Function names</strong> start with a lowercase letter.</p></li>
+</ul>
+<p>### Abbreviations for Matrix Types:
+* <strong>A</strong> = Adjacency matrix
+* <strong>B</strong> = Incidence matrix
+* <strong>C</strong> = Capacity matrix
+* <strong>F</strong> = Flow matrix
+* <strong>S</strong> = Stochastic matrix
+* <strong>sR</strong> = Sum of rows
+* <strong>sC</strong> = Sum of columns
+* <strong>kappa</strong> = Total flow
+* <strong>pi</strong> = Node vector (steady state)
+* <strong>[m, n]</strong> = Matrix size (m rows, n columns)</p>
+</section>
+<section id="coding-standards">
+<h2>Coding Standards<a class="headerlink" href="#coding-standards" title="Link to this heading"></a></h2>
+<p>For clarity and uniformity, we use the following terminologies across the IFN package:</p>
+<ul class="simple">
+<li><p>A <strong>network</strong> consists of <strong>nodes</strong> (vertices) and <strong>links</strong> (edges in graph theory).</p></li>
+<li><p>A <strong>trajectory</strong> (or path) is a sequence of nodes (or links).</p></li>
+<li><p>A <strong>cycle</strong> is a path where the start and end nodes are the same.</p></li>
+<li><p><strong>Flow</strong> refers to the weight on a link, a node, or both.</p></li>
+</ul>
+<p>As per our agreement, all private functions are named using double underscores (<cite>__function_name__</cite>) to clearly differentiate them from public methods.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="overview.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="unit_tests.html" class="btn btn-neutral float-right" title="Unit Tests" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Kardi Teknomo.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
