@@ -3,9 +3,11 @@
 
 [![PyPI version](https://badge.fury.io/py/IdealFlowNetwork.svg)](https://badge.fury.io/py/IdealFlowNetwork)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
-[![Documentation Status](https://readthedocs.org/projects/idealflownetwork/badge/?version=latest)](https://people.revoledu.com/kardi/tutorial/IFN/)
+[![Documentation](https://img.shields.io/badge/Documentation-IdealFlowNetwork-brightgreen)](https://people.revoledu.com/kardi/research/trajectory/ifn/doc/html/)
 [![Twitter Follow](https://img.shields.io/twitter/follow/Revoledu?style=social)](https://twitter.com/Revoledu)
 [![Telegram](https://img.shields.io/badge/Telegram-IdealFlowNetwork-blue.svg)](https://t.me/IdealFlowNetwork)
+[![Discord](https://img.shields.io/badge/Discord-IdealFlowNetwork-7289da.svg)](https://discord.gg/fUVzBx5GF4)
+
 
 The `IdealFlowNetwork` Python package provides powerful tools for creating and managing **Ideal Flow Networks (IFN)**. An Ideal Flow Network is a strongly connected network where the flows are balanced. This concept is linked to how we think about honesty, integrity, and the long-term consequences of our actions, touching upon morality and spirituality. By understanding how systems work, we can make better decisions that align with these values.
 
@@ -101,7 +103,7 @@ print('Coef. Variation of Flow:',n.cov_flow) # coef. variation of flow
 n.show();
 ```
 
-For more detailed tutorials and documentation, please visit our [official documentation](https://people.revoledu.com/kardi/tutorial/IFN/).
+For more detailed [tutorials](https://people.revoledu.com/kardi/tutorial/IFN/) and documentation, please visit our [official documentation](https://people.revoledu.com/kardi/research/trajectory/ifn/doc/html/).
 
 ## Applications
 
