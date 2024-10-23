@@ -6,7 +6,7 @@ from pygments.lexers import PythonLexer
 # Assign the Python lexer to ipython3
 lexers['ipython3'] = PythonLexer()
 
-sys.path.insert(0, os.path.abspath('../../pkg'))
+sys.path.insert(0, os.path.abspath('pkg'))
 
 # Configuration file for the Sphinx documentation builder.
 #
