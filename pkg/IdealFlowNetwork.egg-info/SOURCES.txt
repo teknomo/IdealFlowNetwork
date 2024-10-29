@@ -1,0 +1,13 @@
+pyproject.toml
+setup.py
+IdealFlow/Classifier.py
+IdealFlow/Command.py
+IdealFlow/Network.py
+IdealFlow/Table.py
+IdealFlow/Text.py
+IdealFlow/__init__.py
+IdealFlowNetwork.egg-info/PKG-INFO
+IdealFlowNetwork.egg-info/SOURCES.txt
+IdealFlowNetwork.egg-info/dependency_links.txt
+IdealFlowNetwork.egg-info/not-zip-safe
+IdealFlowNetwork.egg-info/top_level.txt

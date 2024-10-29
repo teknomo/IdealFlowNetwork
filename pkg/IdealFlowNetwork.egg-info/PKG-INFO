@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: IdealFlowNetwork
+Version: 1.15.4
+Summary: A Python package for Ideal Flow Network computations
+Home-page: https://github.com/teknomo/IdealFlowNetwork
+Author: Kardi Teknomo
+Author-email: Kardi Teknomo <kardi.teknomo@petra.ac.id>
+Project-URL: Homepage, https://github.com/teknomo/IdealFlowNetwork
+Project-URL: Issues, https://github.com/teknomo/IdealFlowNetwork/issues
+Project-URL: Documentation, https://idealflownetwork.readthedocs.io/
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown

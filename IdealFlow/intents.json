@@ -1,0 +1,49 @@
+{
+    "book_flight": [
+        "book",
+        "flight",
+        "ticket",
+        "reserve",
+        "airline"
+    ],
+    "weather_query": [
+        "weather",
+        "temperature",
+        "forecast",
+        "climate"
+    ],
+    "greeting": [
+        "hello",
+        "hi",
+        "hey",
+        "greetings"
+    ],
+    "goodbye": [
+        "bye",
+        "goodbye",
+        "see you",
+        "farewell"
+    ],
+    "order_food": [
+        "order",
+        "food",
+        "pizza",
+        "delivery",
+        "hungry"
+    ],
+    "schedule_meeting": [
+        "i",
+        "alice",
+        "appointment",
+        "have",
+        "3",
+        "with",
+        "meeting",
+        "at",
+        "an",
+        "a",
+        "meet",
+        "schedule",
+        "pm"
+    ]
+}

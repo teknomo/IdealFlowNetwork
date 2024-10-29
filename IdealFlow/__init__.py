@@ -1,0 +1,2 @@
+from .Network import IFN
+

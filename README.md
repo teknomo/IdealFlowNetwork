@@ -89,12 +89,19 @@ print(n)
 
 # Extract matrix and list of nodes 
 matrix, list_nodes = n.get_matrix()
+print('matrix:',matrix)           # weighted adjacency matrix
+print('list nodes:',list_nodes)           # weighted adjacency matrix
+
+# Query the neighbors of node 'a'
+in_neighbors = n.in_neighbors('a')
+print("In-Neighbors of 'a':", in_neighbors)
+out_neighbors = n.out_neighbors('a')
+print("Out-Neighbors of 'a':", out_neighbors)
 
 # Get network performances
 print('Total Nodes:',n.total_nodes)           # number of nodes
 print('Total Links:',n.total_links)           # number of links
 print('List of Links:',n.get_links)           # list of  links
-print('List of Nodes:',n.nodes)               # list of  links
 print('Total Flow:',n.total_flow)             # total flow
 print('Network Entropy:',n.network_entropy)   # network entropy 
 print('Coef. Variation of Flow:',n.cov_flow) # coef. variation of flow
