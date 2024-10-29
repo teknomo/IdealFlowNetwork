@@ -3,14 +3,19 @@
 # See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
 
 # Required
-version: 1.15.5
+version: master
 
 # Set the OS, Python version and other tools you might need
+python:
+  install:
+    - method: pip
+      path: .
+      
 build:
   os: ubuntu-22.04
   tools:
     python: "3.12"
-
+  clone_depth: 50
 
 # Build documentation in the "docs/" directory with Sphinx
 sphinx:
