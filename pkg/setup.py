@@ -1,11 +1,17 @@
 from setuptools import setup, find_packages
+# read the contents of your README file
+from pathlib import Path
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text()
 
 setup(name='IdealFlowNetwork',
-    version='1.15.4',
+    version='1.15.5',
     description='A Python package for Ideal Flow Network computations',    
     url='https://github.com/teknomo/IdealFlowNetwork',  
     author='Kardi Teknomo',
     author_email='kardi.teknomo@petra.ac.id',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     packages=find_packages(),  # Automatically find all packages in your source directory
     include_package_data=True,  # To include files from MANIFEST.in 
     install_requires=[

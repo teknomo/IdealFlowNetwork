@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "IdealFlowNetwork"
-version = "1.15.4"
+version = "1.15.5"
 authors = [
   { name="Kardi Teknomo", email="kardi.teknomo@petra.ac.id" },
 ]

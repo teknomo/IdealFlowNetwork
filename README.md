@@ -3,13 +3,13 @@
 
 [![PyPI version](https://badge.fury.io/py/IdealFlowNetwork.svg)](https://badge.fury.io/py/IdealFlowNetwork)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
-[![Documentation](https://img.shields.io/badge/Documentation-IdealFlowNetwork-brightgreen)](https://people.revoledu.com/kardi/research/trajectory/ifn/doc/html/)
+[![Documentation](https://img.shields.io/badge/Documentation-IdealFlowNetwork-brightgreen)](https://people.revoledu.com/kardi/research/trajectory/ifn/doc)
 [![Twitter Follow](https://img.shields.io/twitter/follow/Revoledu?style=social)](https://twitter.com/Revoledu)
 [![Telegram](https://img.shields.io/badge/Telegram-IdealFlowNetwork-blue.svg)](https://t.me/IdealFlowNetwork)
 [![Discord](https://img.shields.io/badge/Discord-IdealFlowNetwork-7289da.svg)](https://discord.gg/fUVzBx5GF4)
 
 
-The `IdealFlowNetwork` Python package provides powerful tools for creating and managing **Ideal Flow Networks (IFN)**. An Ideal Flow Network is a strongly connected network where the flows are balanced. This concept is linked to how we think about honesty, integrity, and the long-term consequences of our actions, touching upon morality and spirituality. By understanding how systems work, we can make better decisions that align with these values.
+The `IdealFlowNetwork` Python package provides tools for creating and managing **Ideal Flow Networks (IFN)**. An Ideal Flow Network is a strongly connected network where the flows are balanced. This concept is linked to how we think about honesty, integrity, and the long-term consequences of our actions, touching upon morality and spirituality. By understanding how systems work, we can make better decisions that align with these values.
 
 ## Table of Contents
 
@@ -38,7 +38,7 @@ For a special application to transportation planning, check out the traffic assi
 
 ## Features
 
-- **Flexible and Scalable Modules**: Includes Network, Classifier, Text, and Table modules designed for various network analysis applications.
+- **Flexible and Scalable Modules**: Includes expandable Network, Classifier, Text, and Table modules designed for various network analysis applications.
 - **Data Management**: Functions for managing data, manipulating network structures, and querying network information.
 - **Comprehensive Analysis Tools**: Methods for analyzing and manipulating nodes, links, adjacency lists, matrices, and performing network analysis and metrics.
 - **Advanced Algorithms**: Includes path finding, cycle analysis, connectivity analysis, signature computations, and more.
@@ -53,7 +53,7 @@ pip install IdealFlowNetwork
 
 Check out the package on [PyPI](https://pypi.org/project/IdealFlowNetwork/).
 
-Latest Stable Version: [1.5.1](https://pypi.org/project/IdealFlowNetwork/1.5.1/)
+Latest Stable Version: [1.5.5](https://pypi.org/project/IdealFlowNetwork/1.5.5/)
 
 Alternatively, download the zip file from [GitHub](https://github.com/teknomo/IdealFlowNetwork), unzip the file in a folder. 
 1. Go to folder *pkg*
