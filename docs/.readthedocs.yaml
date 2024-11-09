@@ -9,6 +9,7 @@ python:
   install:
     - method: pip
       path: .
+    - requirements: docs/requirements.txt  # Ensure this file contains all dependencies
       
 build:
   os: ubuntu-22.04
@@ -26,6 +27,4 @@ sphinx:
 #    - epub
 
 # Optionally declare the Python requirements to ensure reproducibility
-python:
-  install:
-    - requirements: docs/requirements.txt  # Ensure this file contains all dependencies
+    
