@@ -5,7 +5,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 [![Documentation](https://img.shields.io/badge/Documentation-IdealFlowNetwork-brightgreen)](https://people.revoledu.com/kardi/research/trajectory/ifn/doc)
 [![Documentation Status](https://readthedocs.org/projects/idealflownetwork/badge/?version=master)](https://idealflownetwork.readthedocs.io/?badge=master)
-[![Twitter Follow](https://img.shields.io/twitter/follow/Revoledu?style=social)](https://twitter.com/Revoledu)
+[![X Twitter](https://img.shields.io/twitter/follow/kteknomo?style=social)](https://x.com/kteknomo)
 [![Telegram](https://img.shields.io/badge/Telegram-IdealFlowNetwork-blue.svg)](https://t.me/IdealFlowNetwork)
 [![Discord](https://img.shields.io/badge/Discord-IdealFlowNetwork-7289da.svg)](https://discord.gg/fUVzBx5GF4)
 
