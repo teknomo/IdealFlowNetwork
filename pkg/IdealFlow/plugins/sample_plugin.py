@@ -1,6 +1,6 @@
 # plugins/sample_plugin.py
 import time
-from Automation import PluginInterface
+from plugin import PluginInterface
 
 class SamplePlugin(PluginInterface):
     def get_actions(self):
