@@ -43,7 +43,7 @@ If you have ideas for new features or improvements, we'd love to hear them!
 
 ### Contributing Code
 
-We welcome code contributions!
+We welcome code contributions! We encourage you create your own plugin and example on how to do automate using Ideal Flow Network. 
 
 - **Find an Issue**: Look for issues labeled as `help wanted` or `good first issue`.
 - **Fork the Repository**: Create a personal fork of the repository.

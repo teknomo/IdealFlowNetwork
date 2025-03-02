@@ -56,7 +56,7 @@ Check out the package on [PyPI](https://pypi.org/project/IdealFlowNetwork/).
 
 Latest Stable Version: [1.5.5](https://pypi.org/project/IdealFlowNetwork/1.5.5/)
 
-The latest the zip file (still unstable) versioncan be downloaded from [GitHub](https://github.com/teknomo/IdealFlowNetwork), unzip the files in a folder. 
+The latest the zip file (still unstable) version can be downloaded from [GitHub](https://github.com/teknomo/IdealFlowNetwork), unzip the files in a folder. 
 1. Go to folder *pkg*
 
 ```bash
@@ -111,7 +111,7 @@ print('Coef. Variation of Flow:',n.cov_flow) # coef. variation of flow
 n.show();
 ```
 
-For more detailed [tutorials](https://people.revoledu.com/kardi/tutorial/IFN/) and documentation, please visit our [official documentation](https://people.revoledu.com/kardi/research/trajectory/ifn/doc/html/).
+For more detailed [tutorials](https://people.revoledu.com/kardi/tutorial/IFN/) and documentation, please visit our [official documentation](https://people.revoledu.com/kardi/research/trajectory/ifn/doc/).
 
 ## Applications
 
@@ -121,14 +121,15 @@ Ideal Flow Networks have been applied in various domains:
 - **Communication Networks**: Analyzing power dynamics of communications based on strength of influence and network structure.
 - **Health Science**: Understanding the spread of diseases in epidemiology.
 - **Ecology**: Studying energy and resource flows in ecosystems.
-- **Data Science and AI**: Enhancing machine learning algorithms with network-based approaches.
+- **Data Science and Artificial Intelligence (AI)**: Enhancing machine learning algorithms with network-based approaches.
 - **Systems Thinking and Philosophy**: Exploring concepts of interconnectedness and systemic behavior.
-- **Robot Process Automation (RPA)**: Create synchronous and synchronous automation based on Large Language Models (LLM), mouse recording and simulation, multi agent systems and many more based on Automation plugins.
+- **Robot Process Automation (RPA)**: Create synchronous and synchronous automation based on Large Language Models (LLM), mouse recording and simulation, Multi Agent Systems (MAS) and many more applications based on Automation plugins.
 
 ## Contributing
 
 We welcome contributions from everyone! If you're interested in contributing to the Ideal Flow Network project, here are some ways you can help:
 
+- **Develop**: Create your own plugins and example to automate the process. Send the pull request.
 - **Test**: Try out the package and let us know if you encounter any issues.
 - **Comment and Critique**: Provide feedback to help us improve.
 - **Use**: Incorporate IFN into your projects and share your experiences.
@@ -143,6 +144,8 @@ Join our community to connect with other users and contributors:
 - **Discord**: [IdealFlowNetwork](https://discord.gg/fUVzBx5GF4).
 - **Telegram Channel**: [Ideal Flow Network](https://t.me/IdealFlowNetwork)
 - **Twitter**: Follow us [@Revoledu](https://twitter.com/Revoledu)
+- **YouTube**: Watch the latest research about IFN [@KardiTeknomo](https://www.youtube.com/playlist?list=PLW_0uLdxedwuhfMWiNTE3pSOnVgLYVRrs)
+
 
 ## License
 
