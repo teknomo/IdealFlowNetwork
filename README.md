@@ -56,7 +56,7 @@ Check out the package on [PyPI](https://pypi.org/project/IdealFlowNetwork/).
 
 Latest Stable Version: [1.5.5](https://pypi.org/project/IdealFlowNetwork/1.5.5/)
 
-Alternatively, download the zip file from [GitHub](https://github.com/teknomo/IdealFlowNetwork), unzip the file in a folder. 
+The latest the zip file (still unstable) versioncan be downloaded from [GitHub](https://github.com/teknomo/IdealFlowNetwork), unzip the files in a folder. 
 1. Go to folder *pkg*
 
 ```bash
@@ -66,7 +66,7 @@ cd *your_folder_name*`/pkg`
 ```bash 
 > pip install . 
 ```
-It copies the package files to your Python environment. 
+Copy the package files to your Python environment. 
 
 ## Getting Started
 
@@ -118,11 +118,12 @@ For more detailed [tutorials](https://people.revoledu.com/kardi/tutorial/IFN/) a
 Ideal Flow Networks have been applied in various domains:
 
 - **Transportation Planning**: Modeling and optimizing traffic flows.
-- **Communication Networks**: Analyzing data packet flows and network reliability.
+- **Communication Networks**: Analyzing power dynamics of communications based on strength of influence and network structure.
 - **Health Science**: Understanding the spread of diseases in epidemiology.
 - **Ecology**: Studying energy and resource flows in ecosystems.
 - **Data Science and AI**: Enhancing machine learning algorithms with network-based approaches.
 - **Systems Thinking and Philosophy**: Exploring concepts of interconnectedness and systemic behavior.
+- **Robot Process Automation (RPA)**: Create synchronous and synchronous automation based on Large Language Models (LLM), mouse recording and simulation, multi agent systems and many more based on Automation plugins.
 
 ## Contributing
 
