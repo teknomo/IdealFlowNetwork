@@ -1,8 +1,8 @@
 #example_user_data.py
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../pkg/IdealFlow")))
-from Automation import Automation, PluginManager
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../IdealFlow")))
+from Automation import Automation
 
 # Initialize the Automation framework
 af = Automation("User Data Automation")

@@ -1,7 +1,7 @@
 # example_sample_plugin.py
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../src")))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../IdealFlow")))
 from Automation import Automation
 import matplotlib.pyplot as plt
 

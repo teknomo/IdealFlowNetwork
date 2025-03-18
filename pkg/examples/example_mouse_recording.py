@@ -1,7 +1,7 @@
 # example_mouse_recording.py
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../src")))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../IdealFlow")))
 from Automation import Automation
 if __name__=='__main__':    
     filename = 'mouse_record.txt'

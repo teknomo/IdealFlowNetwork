@@ -1,3 +1,10 @@
+# Node.py
+"""
+IdealFlow
+Node Class
+
+@author: Kardi Teknomo
+"""
 from enum import Enum, auto
 import threading
 import queue

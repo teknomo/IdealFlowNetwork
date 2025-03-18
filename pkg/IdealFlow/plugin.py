@@ -1,5 +1,10 @@
 #plugin.py
+"""
+IdealFlow
+plugin.py v1
 
+@author: Kardi Teknomo
+"""
 from abc import ABC, abstractmethod
 import importlib
 import os

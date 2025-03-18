@@ -1,3 +1,10 @@
+#Automation.py
+"""
+Ideal Flow Network Automation Class
+===================================
+@author: Kardi Teknomo (http://people.revoledu.com/kardi/)
+@date: 2024
+"""
 from IdealFlow.Network import IFN
 from plugin import PluginManager, ExecutionManager
 from Node import Node
