@@ -8745,9 +8745,11 @@ class IFN():
         for term in terms:
             term = term.strip()
             count_str = ''.join(filter(str.isdigit, term))
-            signature = ''.join(filter(str.isalpha, term))
-            if signature not in term_dict:
-                term_dict[signature] = int(count_str) if count_str else 1
+            cycle_str = ''.join(filter(str.isalpha, term))
+            coeff = int(count_str) if count_str else 1            
+            term_dict[cycle_str] = term_dict.get(cycle_str, 0) + coeff
+            # if signature not in term_dict:
+            #     term_dict[signature] = int(count_str) if count_str else 1
         return term_dict
 
 
