@@ -8937,7 +8937,7 @@ class IFN():
             adj_list[node] = {}
             for j in range(size):
                 if matrix[i][j] != 0:
-                    adj_list[node][IFN.node_name(j)] = matrix[i][j]
+                    adj_list[node][IFN.node_name(j)] = matrix[i][j].item()
         return adj_list
 
 
