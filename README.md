@@ -37,7 +37,7 @@ IFNs have profound implications in various fields, including transportation netw
 
 For a special application to transportation planning, check out the traffic assignment software [IFN-Transport](https://github.com/teknomo/ifn-transport).
 
-## Features1
+## Features
 
 - **Flexible and Scalable Modules**: Includes expandable Network, Classifier, Text, and Table modules designed for various network analysis applications.
 - **Data Management**: Functions for managing data, manipulating network structures, and querying network information.
