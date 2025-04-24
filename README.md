@@ -1,5 +1,5 @@
 
-# Ideal Flow Network Python Library
+# Ideal Flow Network Python Library 
 
 [![PyPI version](https://badge.fury.io/py/IdealFlowNetwork.svg)](https://badge.fury.io/py/IdealFlowNetwork)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
@@ -37,7 +37,7 @@ IFNs have profound implications in various fields, including transportation netw
 
 For a special application to transportation planning, check out the traffic assignment software [IFN-Transport](https://github.com/teknomo/ifn-transport).
 
-## Features
+## Features1
 
 - **Flexible and Scalable Modules**: Includes expandable Network, Classifier, Text, and Table modules designed for various network analysis applications.
 - **Data Management**: Functions for managing data, manipulating network structures, and querying network information.
